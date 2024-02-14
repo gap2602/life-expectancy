@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Life Expectancy</title>
+<link rel="stylesheet" href="style.css"> </head>
+<body>
+  <h1>Life Expectancy</h1>
+  <div class="calculator">
+    <br>
+        <legend>Gender:</legend>
+        <label for="male">Male:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <br>
+        <label for="female">Female:</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <br>
+        <label for="age">อายุ:</label>
+        <input type="number" id="age" placeholder="Enter your age">
+    <br>
+    <br>
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" placeholder="Enter your weight">
+    <br>
+    <label for="height">Height (cm):</label>
+    <input type="number" id="height" placeholder="Enter your height">
+    <br>
+    <button onclick="calculate_rr()">Calculate BMI</button>
+    <p id="result"></p>
+    <br>
+    <button onclick="rr_bmi()">Calculate BMI Risk</button>
+    <p id="result_bmi"></p>
+    <br>
+    <label for="SBP">Systolic Blood Pressure (mmHg):</label>
+    <input type="number" id="SBP" placeholder="กรอกค่าคสามดันโลหิต">
+    <button onclick="rr_sbp()">Calculate SBP Risk</button>
+    <p id="result_sbp"></p>
+    <br>
+    <label for="FPG">Fasting Plasma Glucose:</label>
+    <input type="number" id="FPG" placeholder="กรอกระดับน้ำตาลในเลือด">
+    <button onclick="rr_fpg()">Calculate FPG Risk</button>
+    <p id="result_fpg"></p>
+    <br>
+    <label for="LDL">LDL:</label>
+    <input type="number" id="LDL" placeholder="กรอกระดับไขมัน">
+    <button onclick="rr_ldl()">Calculate LDL Risk</button>
+    <p id="result_ldl"></p>
+    <br>
+    <label for="ออกกำลังกาย">ออกกำลังกาย:</label>
+    <input type="number" id="activity" placeholder="นาที/สัปดาห์">
+    <button onclick="rr_act()">Calculate Activity Risk</button>
+    <p id="result_act"></p>
+    <br>
+        <legend>สูบไหม</legend>
+        <label for="ไม่สูบ">ไม่สูบ:</label>
+        <input type="radio" id="ไม่สูบ" name="smoke_status" value="never">
+        <label for="เคยสูบ">เคยสูบ:</label>
+        <input type="radio" id="เคยสูบ" name="smoke_status" value="former">
+        <label for="สูบ">สูบ:</label>
+        <input type="radio" id="สูบ" name="smoke_status" value="current">
+    <br>
+    <label for="กี่มวน">กี่มวน:</label>
+    <input type="number" id="roll" placeholder="จำนวนมวน">
+    <br>
+    <label for="สูบมาแล้วกี่ปี">สูบมาแล้วกี่ปี:</label>
+    <input type="number" id="year_of_smoke" placeholder="จำนวนปี">
+    <br>
+    <label for="เลิกแล้วกี่ปี">เลิกแล้วกี่ปี:</label>
+    <input type="number" id="year_of_quit" placeholder="จำนวนปี">
+    <button onclick="rr_smk()">Calculate Smoke Risk</button>
+    <p id="result_smk"></p>
+    <br>
+    <label for="แอลกอฮล์">แอลกอฮล์:</label>
+    <input type="number" id="alcohol" placeholder="กรัม/วัน">
+    <button onclick="rr_alc()">Calculate Alcohol Risk</button>
+    <p id="result_alc"></p>
+    <br>
+    <button onclick="rr_combine()">Calculate Combine</button>
+    <p id="result_combine"></p>
+    <br>
+    <button onclick="le()">Calculate Life Expectancy</button>
+    <p id="result_life_expectancy"></p>
+  </div>
+
+  <script src="script.js"></script> </body>
+  <script src="death_rate.js"></script> </body>
+  <script src="le.js"></script> </body>
+  <script src="risk_act.js"></script> </body>
+  <script src="risk_alc.js"></script> </body>
+  <script src="risk_bmi.js"></script> </body>
+  <script src="risk_fpg.js"></script> </body>
+  <script src="risk_ldl.js"></script> </body>
+  <script src="risk_sbp.js"></script> </body>
+  <script src="risk_smk.js"></script> </body>
+  <script src="rr_combine.js"></script> </body>
+</html>
