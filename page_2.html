@@ -13,67 +13,49 @@
     <div class ="header">
         <div class="arrow-frame">
             <div id="arrow-circle">
-                <a href="page_1.html" class = "arrow">&#8592;</a>
-            </div>
+                <button class = "arrow" type="button" onclick="document.location='index.html'">&#10229;</button>
+            </div> 
             <p id="previous">ย้อนกลับ</p>
         </div>
-        <section class="step-wizard">
-            <ul class="step-wizard-list">
-                <li class="step-wizard-item">
-                    <div class="progress-count" id="current">&#x2022;</div>
-                    <div class="progress-label">ข้อมูลทั่วไป</div>
-                </li>
-                <li class="step-wizard-item">
-                    <div class="progress-count"></div>
-                    <div class="progress-label">ข้อมูลสุขภาพ</div>
-                </li>
-                <li class="step-wizard-item">
-                    <div class="progress-count"></div>
-                    <div class="progress-label">พฤติกรรมสุขภาพ</div>
-                </li>
-                <li class="step-wizard-item">
-                    <div class="progress-count"></div>
-                    <div class="progress-label">ภาพรวมพฤติกรรมสุขภาพ</div>
-                </li>
-            </ul>
-        </section>
+        <div class="step-topic">
+            <div class="topic-circle"><div class="circle" id="current">&#x2022;</div></div>
+            <div class="topic-circle"><div class="circle"></div></div>
+            <div class="topic-circle"><div class="circle"></div></div>
+            <div class="topic-circle"><div class="circle"></div></div>
+            <p class="topic-list">ข้อมูลทั่วไป</p>
+            <p class="topic-list">ข้อมูลสุขภาพ</p>
+            <p class="topic-list">พฤติกรรมสุขภาพ</p>
+            <p class="topic-list">ภาพรวมพฤติกรรมสุขภาพ</p>
+        </div>
     </div>
     <h1 class="topic">ข้อมูลทั่วไป</h1>
     <h3 class="warning">*กรุณากรอกข้อมูลให้ครบทุกช่อง</h3>
     <div class="main-content">
         <div class="input-side">
-            <div class="question-frame">
-                <div class="question">เพศ</div>
-                <form class="answer">
-                    <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="gender-w"></i>
-                    <input class="question-radio" type="radio" name="gender" value="female"/>
-                    <label class="gender" for="female">หญิง</label>
-                    <input class="question-radio" type="radio" name="gender" value="male"/>
-                    <label class="gender" for="male">ชาย</label>
-                </form>
+            <h1 class="question">เพศ</h1>
+            <form class="answer">
+                <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="gender-w"></i>
+                <input class="question-radio" type="radio" name="gender" value="female"/>
+                <label class="gender" for="female" id="female">หญิง</label>
+                <input class="question-radio" type="radio" name="gender" value="male"/>
+                <label class="gender" for="male" id="male">ชาย</label>
+            </form>
+            <h1 class="question">อายุ</h1>
+            <div class="answer">
+                <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="age-w"></i>
+                <input class="answer-number" type="number" placeholder="อายุของคุณ" id="age" onfocus="this.placeholder=''" onblur="this.placeholder='อายุของคุณ'"/> ปี
             </div>
-            <div class="question-frame">
-                <div class="question">อายุ</div>
-                <div class="answer">
-                    <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="age-w"></i>
-                    <input class="answer-number" type="number" placeholder="อายุของคุณ" id="age" onfocus="this.placeholder=''" onblur="this.placeholder='อายุของคุณ'"/> ปี
-                </div>           
+            <h1 class="question">ส่วนสูง</h1>
+            <div class="answer">
+                <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="height-w"></i>
+                <input class="answer-number" type="number" placeholder="ส่วนสูงของคุณ" id="height" onchange="cal_bmi()" onfocus="this.placeholder=''" onblur="this.placeholder='ส่วนสูงของคุณ'"/> เซนติเมตร
             </div>
-            <p id="range-warning">กรุณากรอกช่วงอายุระหว่าง 25 - 100 ปี</p>
-            <div class="question-frame">
-                <div class="question">ส่วนสูง</div>
-                <div class="answer">
-                    <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="height-w"></i>
-                    <input class="answer-number" type="number" placeholder="ส่วนสูงของคุณ" id="height" onchange="cal_bmi()" onfocus="this.placeholder=''" onblur="this.placeholder='ส่วนสูงของคุณ'"/> เซนติเมตร
-                </div>
+            <h1 class="question">น้ำหนัก</h1>
+            <div class="answer">
+                <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="weight-w"></i>
+                <input class="answer-number" type="number" placeholder="น้ำหนักของคุณ" id="weight" onchange="cal_bmi()" onfocus="this.placeholder=''" onblur="this.placeholder='น้ำหนักของคุณ'"/> กิโลกรัม
             </div>
-            <div class="question-frame">
-                <div class="question">น้ำหนัก</div>
-                <div class="answer">
-                    <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="weight-w"></i>
-                    <input class="answer-number" type="number" placeholder="น้ำหนักของคุณ" id="weight" onchange="cal_bmi()" onfocus="this.placeholder=''" onblur="this.placeholder='น้ำหนักของคุณ'"/> กิโลกรัม
-                </div>
-            </div>
+            <span id="range-warning">กรุณากรอกช่วงอายุระหว่าง 25 - 100 ปี</span>
         </div>
         <div class="result-side">
             <div class="result-topic">ค่า BMI ของคุณคือ :</div>
@@ -86,31 +68,30 @@
                 </div>
                 <div class="meaning-text-frame">
                     <div class="result-topic">ความหมาย</div>
-                    <div class="meaning-text" id="result-bmi-meaning"></div>
+                    <p class="meaning-text" id="result-bmi-meaning"></p>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<button class="start-button" type="button" id="next-button" onclick=checkInput()>ถัดไป &#9658;</button>
-<div class="footer">
-    <div class="footer-1">
-        <div class="text-footer">
-            <p class="ft-1">Content by</p>
-            <p class="ft-1">แผนงานพัฒนาดัชนีภาระโรคแห่งประเทศไทย</p>
+    <div class="row-button">
+        <button class="start-button" type="button" onclick="checkInput()">ถัดไป &#9658;</button>
+    </div> 
+    <div class="footer">
+        <div class="footer-1">
+            <div class="text-footer">
+                <p class="ft-1">Content by<br>แผนงานพัฒนาดัชนีภาระโรคแห่งประเทศไทย</p>
+            </div>
+            <div class="text-footer">
+                <p class="ft-1">Supported by<br>สำนักงานคณะกรรมการส่งเสริมวิทยาศาสตร์ วิจัยและนวัตกรรม (สกสว.)</p>
+            </div>
         </div>
-        <div class="text-footer">
-            <p class="ft-1">Supported by</p>
-            <p class="ft-1">สำนักงานคณะกรรมการส่งเสริมวิทยาศาสตร์ วิจัยและนวัตกรรม (สกสว.)</p>
-        </div>  
+        <div class="footer-2"> 
+            <div class="logo-grid"><img src="Logo\IHPP edit.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\BOD_rm_bg.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\logo MOPH.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\TSRI_Logo-Original_08.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\ThaiHealth.png" class="logo"></div> 
+        </div>
     </div>
-    <div class="footer-2"> 
-        <img src="Logo\IHPP edit.png" class="logo">
-        <img src="Logo\BOD_rm_bg.png" class="logo">
-        <img src="Logo\logo MOPH.png" class="logo">
-        <img src="Logo\TSRI_Logo-Original_08.png" class="logo">
-        <img src="Logo\ThaiHealth.png" class="logo">
-    </div>
-</div>
 </body>
 </html>
