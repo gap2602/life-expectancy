@@ -13,90 +13,84 @@
     <div class ="header">
         <div class="arrow-frame">
             <div id="arrow-circle">
-                <a href="page_2.html" class = "arrow">&#8592;</a>
-            </div>
+                <button class = "arrow" type="button" onclick="document.location='page_2.html'">&#10229;</button>
+            </div> 
             <p id="previous">ย้อนกลับ</p>
         </div>
-        <section class="step-wizard">
-            <ul class="step-wizard-list">
-                <li class="step-wizard-item">
-                    <div class="progress-count" id="prev">&#10004;</div>
-                    <div class="progress-label">ข้อมูลทั่วไป</div>
-                </li>
-                <li class="step-wizard-item">
-                    <div class="progress-count" id="current">&#x2022;</div>
-                    <div class="progress-label">ข้อมูลสุขภาพ</div>
-                </li>
-                <li class="step-wizard-item">
-                    <div class="progress-count"></div>
-                    <div class="progress-label">พฤติกรรมสุขภาพ</div>
-                </li>
-                <li class="step-wizard-item">
-                    <div class="progress-count"></div>
-                    <div class="progress-label">ภาพรวมพฤติกรรมสุขภาพ</div>
-                </li>
-            </ul>
-        </section>
+        <div class="step-topic">
+            <div class="topic-circle"><div class="circle" id="prev">&#10004;</div></div>
+            <div class="topic-circle"><div class="circle" id="current">&#x2022;</div></div>
+            <div class="topic-circle"><div class="circle"></div></div>
+            <div class="topic-circle"><div class="circle"></div></div>
+            <p class="topic-list">ข้อมูลทั่วไป</p>
+            <p class="topic-list">ข้อมูลสุขภาพ</p>
+            <p class="topic-list">พฤติกรรมสุขภาพ</p>
+            <p class="topic-list">ภาพรวมพฤติกรรมสุขภาพ</p>
+        </div>
     </div>
     <h1 class="topic">ข้อมูลสุขภาพ</h1>
     <h3 class="warning">*กรุณากรอกข้อมูลสุขภาพของคุณจากผลการตรวจสุขภาพครั้งล่าสุด</h3>
     <div class="question-frame">
-        <h1 class="question">1. ระดับความดันโลหิต (SBP)</h1>
-        <h2 class="question-warning">*กรอกเฉพาะ <span class="sub-warning">เลขตัวบน</span></h2>
-        <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="sbp-w"></i>
-        <input class="answer-number" type="number" placeholder="ระดับความดันโลหิต" id="sbp" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับความดันโลหิต'"> mmHg (มิลลิเมตรปรอท)
-    </div>
-    <div class="question-frame">
-        <h1 class="question">2. ระดับน้ำตาลในเลือด (FPG)</h1>
-        <h2 class="question-warning-2">*กรุณาตรวจสอบ <span class="sub-warning-2">หน่วย</span> ให้ตรงก่อนกรอก</h2>
-        <div class="break-line">
-            <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="fpg-w"></i>
-            <div class="input-frame">
-                <input class="answer-number-2" type="number" placeholder="ระดับน้ำตาลในเลือด" id="fpg-mg" oninput="fpgConverter(this.id,this.value)" onchange="fpgConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับน้ำตาลในเลือด'">
-                <h3 class="unit">mg/dl (มิลลิกรัมต่อเตซิลิตร)</h3>
-            </div>
-            <h1 class="conj">หรือ</h1>
-            <div class="input-frame">
-                <input class="answer-number-2" type="number" placeholder="ระดับน้ำตาลในเลือด" id="fpg-mmol" oninput="fpgConverter(this.id,this.value)" onchange="fpgConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับน้ำตาลในเลือด'">
-                <h3 class="unit">mmol/L (มิลลิโมลต่อลิตร)</h3>
-            </div>
+        <div class="question">1. ระดับความดันโลหิต (SBP)</div>
+        <div class="question-warning">*กรอกเฉพาะ <span class="sub-warning">เลขตัวบน</span></div>
+        <div id="range-warning">กรุณากรอกช่วงความดันระหว่าง 90 - 200 ปี</div>
+        <div class="input-block" id="input-block-sbp">
+            <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="sbp-w"></i>
+            <input class="answer-number" type="number" placeholder="ระดับความดันโลหิต" id="sbp" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับความดันโลหิต'"> <div class="unit">mmHg (มิลลิเมตรปรอท)</div>
         </div>
     </div>
+    
     <div class="question-frame">
-        <h1 class="question">3. ระดับคอลเลสเตอรอล (LDL)</h1>
-        <h2 class="question-warning-2">*กรุณาตรวจสอบ <span class="sub-warning-2">หน่วย</span> ให้ตรงก่อนกรอก</h2>
-        <div class="break-line">
-            <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="ldl-w"></i>
-            <div class="input-frame">
-                <input class="answer-number-2" type="number" placeholder="ระดับคอลเลสเตอรอล" id="ldl-mg" oninput="ldlConverter(this.id,this.value)" onchange="ldlConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับคอลเลสเตอรอล'">
-                <h3 class="unit">mg/dl (มิลลิกรัมต่อเตซิลิตร)</h3>
+        <div class="question">2. ระดับน้ำตาลในเลือด (FPG)</div>
+        <div class="question-warning-2">*กรุณาตรวจสอบ <span class="sub-warning-2">หน่วย</span> ให้ตรงก่อนกรอก</div>
+        <div class="input-block">
+            <div></div>   
+            <div>
+                <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="fpg-w"></i>
+                <input class="answer-number" type="number" placeholder="ระดับน้ำตาลในเลือด" id="fpg-mg" oninput="fpgConverter(this.id,this.value)" onchange="fpgConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับน้ำตาลในเลือด'"> <div class="unit">mg/dl (มิลลิกรัมต่อเดซิลิตร)</div>
             </div>
-            <h1 class="conj">หรือ</h1>
-            <div class="input-frame">
-                <input class="answer-number-2" type="number" placeholder="ระดับคอลเลสเตอรอล" id="ldl-mmol" oninput="ldlConverter(this.id,this.value)" onchange="ldlConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับคอลเลสเตอรอล'">
-                <h3 class="unit">mmol/L (มิลลิโมลต่อลิตร)</h3>
+            <div class="conj">หรือ</div>
+            <div>
+                <input class="answer-number" type="number" placeholder="ระดับน้ำตาลในเลือด" id="fpg-mmol" oninput="fpgConverter(this.id,this.value)" onchange="fpgConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับน้ำตาลในเลือด'"> <div class="unit">mmol/L (มิลลิโมลต่อลิตร)</div>
             </div>
-        </div>
+            <div></div>
+        </div>   
     </div>
-    <button class="start-button" type="button" id="next-button" onclick=checkInput()>ถัดไป &#9658;</button>
+    <div class="question-frame">
+        <div class="question">3. ระดับคอลเลสเตอรอล (LDL)</div>
+        <div class="question-warning-2">*กรุณาตรวจสอบ <span class="sub-warning-2">หน่วย</span> ให้ตรงก่อนกรอก</div>
+        <div class="input-block">
+            <div></div>
+            <div>
+                <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="ldl-w"></i>
+                <input class="answer-number" type="number" placeholder="ระดับคอลเลสเตอรอล" id="ldl-mg" oninput="ldlConverter(this.id,this.value)" onchange="ldlConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับคอลเลสเตอรอล'"><div class="unit">mg/dl (มิลลิกรัมต่อเตซิลิตร)</div> 
+            </div>
+            <div class="conj">หรือ</div>
+            <div>
+                <input class="answer-number" type="number" placeholder="ระดับคอลเลสเตอรอล" id="ldl-mmol" oninput="ldlConverter(this.id,this.value)" onchange="ldlConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับคอลเลสเตอรอล'"><div class="unit">mmol/L (มิลลิโมลต่อลิตร)</div> 
+            </div>
+            <div></div>
+        </div> 
+    </div>
+    <div class="row-button">
+        <button class="start-button" type="button" onclick="checkInput()">ถัดไป &#9658;</button>
+    </div> 
     <div class="footer">
         <div class="footer-1">
             <div class="text-footer">
-                <p class="ft-1">Content by</p>
-                <p class="ft-1">แผนงานพัฒนาดัชนีภาระโรคแห่งประเทศไทย</p>
+                <p class="ft-1">Content by<br>แผนงานพัฒนาดัชนีภาระโรคแห่งประเทศไทย</p>
             </div>
             <div class="text-footer">
-                <p class="ft-1">Supported by</p>
-                <p class="ft-1">สำนักงานคณะกรรมการส่งเสริมวิทยาศาสตร์ วิจัยและนวัตกรรม (สกสว.)</p>
-            </div>  
+                <p class="ft-1">Supported by<br>สำนักงานคณะกรรมการส่งเสริมวิทยาศาสตร์ วิจัยและนวัตกรรม (สกสว.)</p>
+            </div>
         </div>
         <div class="footer-2"> 
-            <img src="Logo\IHPP edit.png" class="logo">
-            <img src="Logo\BOD_rm_bg.png" class="logo">
-            <img src="Logo\logo MOPH.png" class="logo">
-            <img src="Logo\TSRI_Logo-Original_08.png" class="logo">
-            <img src="Logo\ThaiHealth.png" class="logo">
+            <div class="logo-grid"><img src="Logo\IHPP edit.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\BOD_rm_bg.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\logo MOPH.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\TSRI_Logo-Original_08.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\ThaiHealth.png" class="logo"></div> 
         </div>
-    </div>
+    </div>-->
 </body>
 </html>

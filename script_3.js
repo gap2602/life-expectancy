@@ -29,9 +29,11 @@ function checkInput() {
 
   if (sbp.value == "" || sbp.value < 90 || sbp.value > 200){
     document.getElementById("sbp-w").style.visibility = "visible";
+    document.getElementById("range-warning").style.visibility = "visible";
     document.getElementById("sbp").style.borderColor = "red";
   } else {
     document.getElementById("sbp-w").style.visibility = "hidden";
+    document.getElementById("range-warning").style.visibility = "hidden";
     document.getElementById("sbp").style.borderColor = "#E6E6E6";
   }
 
