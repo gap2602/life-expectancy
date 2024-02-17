@@ -187,6 +187,7 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder {
     max-width: 200px;
     font-size: 0.8em;
     font-weight: 400;
+    height: 2em;
     color: #6D6D6D;
     border-radius: 5px;
     border: solid #E6E6E6;
@@ -237,6 +238,12 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder {
 .conj {
     font-size: 1em;
     font-weight: 600;
+}
+
+.unit{
+    font-size: 0.8em;
+    font-weight: 400;
+    color: #6D6D6D;
 }
 
 .row-button {
@@ -408,6 +415,11 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder {
     }
     
     .answer-number::placeholder {
+        font-size: 1em;
+        font-weight: 400;
+    }
+
+    .unit {
         font-size: 1em;
         font-weight: 400;
     }

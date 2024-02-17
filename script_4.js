@@ -199,9 +199,9 @@ function checkInput() {
         document.getElementById("alc-w").style.visibility = "hidden";
         alc_status_2 = alc_status.value;
     }
-
-    if (alc_status_2.value == "drink" && !(beer_status) && !(cl_status) && !(white_status) && !(wort_status) && !(wine_status) && !(cocktail_status)) {
-        document.getElementById("choices").style.display = "block";
+    console.log(alc_status, alc_status_2, beer_status)
+    if (alc_status_2 == "drink" && !(beer_status) && !(cl_status) && !(white_status) && !(wort_status) && !(wine_status) && !(cocktail_status)) {
+        document.getElementById("choice-warning").style.display = "block";
         check_count += 1;
     } 
 

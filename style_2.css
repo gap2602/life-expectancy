@@ -175,6 +175,7 @@ body,.start-button, .answer-number::placeholder {
     display: flex;
     box-sizing: border-box;
     width: 70%;
+    height: 2em;
     margin-right: 10px;
     border: solid #E6E6E6;
     border-radius: 5px;
