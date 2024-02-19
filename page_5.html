@@ -170,15 +170,16 @@
         </div>
     </div>
     <div class="sg-topic" id="sg-topic-2">อายุคาดเฉลี่ยของคุณเมื่อเปรียบเทียบกับบุคคลที่ไม่มีปัจจัยเสี่ยงทางด้านสุขภาพ</div>
-    <p id="sg-text">อายุคาดเฉลี่ยของคุณคือ 65 ปี โดยคาดการณ์ว่าคุณจะมีอายุได้ถึง 81.5 ปี แต่หากเปรียบเทียบกับบุคคลที่ไม่มีปัจจัยเสี่ยงทางด้านสุขภาพ
-                    และมีการดูแลตัวเองอย่างสม่ำเสมอ ผลการวิใจควาดการณ์ว่าคุณจะมีอายุเพิ่มขึ้นได้อีก 5 ปี
+    <p id="sg-text">อายุคาดเฉลี่ยของคุณคือ <span class="last-age-sec" id="last-le-age"></span> โดยคาดการณ์ว่าคุณจะมีอายุได้ถึง <span class="last-age-sec" id="last-tt-age"></span> แต่หากเปรียบเทียบกับบุคคลที่ไม่มีปัจจัยเสี่ยงทางด้านสุขภาพ
+                    และมีการดูแลตัวเองอย่างสม่ำเสมอ ผลการวิจัยคาดการณ์ว่าคุณจะมีอายุเพิ่มขึ้นได้อีก <span class="last-age-sec" id="last-diff-age"></span>
     </p>
-    <div id="cp">
-        <div id="curr-age" ></div>
+    <div class = "cp-frame">
+        <div id="cp">
+            <div id="curr-age" ></div>
+        </div>
         <p id="best-age">อายุ <span id="best-le-value"></span> ปี</p>
     </div>
-    <p id="curr-age-text">อายุที่คาดว่าจะอยู่ถึง <span id="le-value"></span> ปี</p>
-    <!--
+    <p id="curr-age-text">อายุที่คาดเฉลี่ยของคุณคือ <span id="le-value"></span> ปี</p>
     <div class="row-button">
         <button class="start-button" type="button" onclick="document.location='index.html'">เริ่มทำแบบประเมินอีกครั้ง &#8634;</button>
     </div> 
@@ -198,7 +199,7 @@
             <div class="logo-grid"><img src="Logo\TSRI_Logo-Original_08.png" class="logo"></div>
             <div class="logo-grid"><img src="Logo\ThaiHealth.png" class="logo"></div> 
         </div>
-    </div>-->
+    </div>
     <script src="script_5.js"></script>
 </body>
 </html>

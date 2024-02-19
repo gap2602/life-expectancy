@@ -231,15 +231,10 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, 
     margin: 0 auto;
 }
 
-
-
-
-
 .conclusion {
     display: flex;
     width: 90%;
     margin: 20px auto;
-    border: solid black;
 }
 
 .cake {
@@ -247,7 +242,6 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, 
     width: 30%;
     display: flex;
     justify-content: center;
-    border: solid black;
 }
 
 .cake > img {
@@ -258,7 +252,6 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, 
 .conclusion-text-block {
     box-sizing: border-box;
     width: 70%;
-    border: solid black;
 }
 
 .conclusion-text {
@@ -268,26 +261,27 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, 
     font-weight: 500;
     text-align: left;
     line-height: 150%;
-    border: solid black;
+    text-indent: 1em;
 }
 
 .conclusion-text-2 {
     box-sizing: border-box;
-    color: #2F6690;
+    color: #D84727;
     font-size: 1em;
+    text-align: left;
     font-weight: 500;
-    border: solid black;
+    text-indent: 1em;
 }
 
 #total-age {
     color: #067AD3;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 700;
 }
 
 #risk-rd {
     color: #D84727;
-    font-size: 20px;
+    font-size: 1em;
     font-weight: 500;
 }
 
@@ -298,7 +292,6 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, 
     font-size: 1.2em;
     font-weight: 700;
     text-align: left;
-    border: solid black;
 }
 
 .sg-risk-grid {
@@ -335,7 +328,6 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, 
     aspect-ratio: 1;
     max-height: 125px;
     margin: 0 auto;
-    border: solid black;
 }
 
 .sg-risk-name {
@@ -367,89 +359,36 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, 
     text-indent: 1em;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.cp-frame {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    width: 70%;
+    margin: 0 auto;
+}
 
 #cp {
     display: flex;
-    width: 70%;
-    /*border: solid black;*/
+    width: 100%;
+    box-sizing: border-box;
     margin: 20px auto;
     height: 50px;
     border-radius: 25px;
     background-color: #C7EEFF;
 }
 
-/*#best-age {
-    display: flex;
-    margin-left: var(--best-age);
-    align-items: center;
-    font-size: 25px;
-    font-weight: 600;
-    color: red;
-    z-index: 0;
-}*/
 #best-age {
     display: flex;
-    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
     align-items: center;
-    font-size: 25px;
-    font-weight: 600;
-    color: red;
-    border: solid black;
-    margin-left: 70%;
-}
-
-#curr-age-text {
-    display: flex;
-    margin-top: 50px;
-    margin-left: var(--margin-left-text); /*calc(-100px + 36%);*/
-    width: 200px;
-    justify-content: center;
-    text-align: center;
-    font-size: 25px;
+    justify-content: left;
+    padding-left: 5px;
+    font-size: 0.8em;
     font-weight: 600;
     color: #2F6690;
-    border: solid black;
+    gap: 0.8em;
 }
+
 
 #curr-age {
     box-sizing: border-box;
@@ -462,9 +401,9 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, 
 #curr-age::before{
     position: relative;
     content: '';
-    display: inline-block;
+    display: block;
     left: calc(100% - 20px);
-    top: 5px;
+    top: 10%;
     width: 40px;
     height: 40px;
     border-radius: 20px;
@@ -482,69 +421,19 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, 
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-.sg-risk-block {
-    display: flex;
-    width: 70%;
-    margin: 20px auto;
-    height: 150px;
-}
-
-.sg-risk-pic {
-    box-sizing: border-box;
-    width: 15%;
-    height: 100%;
-}
-
-.sg-risk-pic > img {
-    height: 100%;
+#curr-age-text {
     display: block;
-    margin: auto;
-}
-
-.sg-risk-name {
-    display: flex;
-    box-sizing: border-box;
-    border: solid #ffe4e1;
-    color: #D84727;
-    font-size: 25px;
-    font-weight: 700;
-    align-items: center;
+    margin-top: 20px;
+    margin-left: var(--margin-left-text); /*calc(-100px + 36%);*/
+    width: 300px;
     justify-content: center;
     text-align: center;
-    margin: auto auto;
-    border-radius: 20px;
-    border-width: 10px;
-    width: 25%;
-    height: 100%;
-    margin-left: 10px;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #2F6690;
+    gap: 0.8em;
 }
 
-.sg-text {
-    width: 60%;
-    margin-left: auto;
-    padding-top: 10px;
-    padding-left: 10px;
-    color: #D84727;
-    font-size: 20px;
-    font-weight: 500;
-    align-items: center;
-}
-*/
 .row-button {
     display: flex;
     width: 100%;
@@ -561,7 +450,6 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, 
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     cursor: pointer;
-    width: 50%;
     height: 60px;
     margin: 3% auto 3%;
     align-items: center;
@@ -623,7 +511,7 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, 
 @media only screen and (max-width: 320px) {
     .start-button {
         font-size: 1em;
-        width: 50%;
+        width: 80%;
     }
 
     .footer-1 {
@@ -634,7 +522,8 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, 
 @media only screen and (min-width: 320px) {
     .start-button {
         font-size: 1em;
-        width: 40%;
+        width: 70%;
+        max-width: 300px;
     }
 
     .sg-risk-name {
@@ -716,11 +605,24 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, 
 
     .sg-risk-name, .sg-risk-num, .risk-up-age, #sg-text {
         font-size: 1em;
-    } 
+    }
+
+    .sg-risk-pic {
+        width: auto;
+        height: 100%;
+    }
+
+    #best-age, #curr-age-text{
+        font-size: 1em;
+    }
+
+    .conclusion-text, .conclusion-text-2 {
+        font-size: 1.2em;
+    }
 
     .start-button {
         font-size: 1.3em;
-        width: 30%;
+        width: 50%;
     }
 
     .ft-1 {
@@ -745,10 +647,15 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, 
     .sg-risk-name, .sg-risk-num, .risk-up-age, #sg-text {
         font-size: 1.2em;
     }
+
+    #best-age, #curr-age-text{
+        font-size: 1.2em;
+    }
+
     
     .start-button {
         font-size: 1.5em;
-        width: 20%;
+        width: 50%;
     }
 
     .ft-1 {
