@@ -21,216 +21,184 @@
     <div class ="header">
         <div class="arrow-frame">
             <div id="arrow-circle">
-                <a href="page_4.html" class = "arrow" onclick="history.back()">&#8592;</a>
-            </div>
+                <button class = "arrow" type="button" onclick="document.location='page_3.html'">&#8592;</button>
+            </div> 
             <p id="previous">ย้อนกลับ</p>
         </div>
-        <section class="step-wizard">
-            <ul class="step-wizard-list">
-                <li class="step-wizard-item">
-                    <div class="progress-count" id="prev">&#10004;</div>
-                    <div class="progress-label">ข้อมูลทั่วไป</div>
-                </li>
-                <li class="step-wizard-item">
-                    <div class="progress-count" id="prev">&#10004;</div>
-                    <div class="progress-label">ข้อมูลสุขภาพ</div>
-                </li>
-                <li class="step-wizard-item">
-                    <div class="progress-count" id="prev">&#10004;</div>
-                    <div class="progress-label">พฤติกรรมสุขภาพ</div>
-                </li>
-                <li class="step-wizard-item">
-                    <div class="progress-count" id="current">&#10004;</div>
-                    <div class="progress-label">ภาพรวมพฤติกรรมสุขภาพ</div>
-                </li>
-            </ul>
-        </section>
+        <div class="step-topic">
+            <div class="topic-circle"><div class="circle" id="prev">&#10004;</div></div>
+            <div class="topic-circle"><div class="circle" id="prev">&#10004;</div></div>
+            <div class="topic-circle"><div class="circle" id="prev">&#10004;</div></div>
+            <div class="topic-circle"><div class="circle" id="current">&#10004;</div></div>
+            <p class="topic-list">ข้อมูลทั่วไป</p>
+            <p class="topic-list">ข้อมูลสุขภาพ</p>
+            <p class="topic-list">พฤติกรรมสุขภาพ</p>
+            <p class="topic-list">ภาพรวมพฤติกรรมสุขภาพ</p>
+        </div>
     </div>
-    <h1 class="topic">ภาพรวมพฤติกรรมสุขภาพของคุณ</h1>
-    <div class="result-frame">
-        <div class="result-left">
-            <div class="risk-block">
-                <div class="risk-header">
-                    <h1 id="gender" class="risk-text"></h1>
-                    <h2 id="bmi" class="risk-text-2"></h2>
-                </div>
-                <div class="risk-body">
-                    <h2 id="age" class="risk-text-3"></h2>
-                    <h2 id="height" class="risk-text-3"></h2>
-                    <h2 id="weight" class="risk-text-3"></h2>
-                </div>
+    <div class="topic">ภาพรวมพฤติกรรมสุขภาพของคุณ</div>
+    <div class="result-block">
+        <div class="result-block-1">
+            <div class="risk-header">
+                <h1 id="gender" class="risk-text"></h1>
+                <h2 id="bmi" class="risk-text-2"></h2>
+            </div>
+            <div class="risk-body">
+                <h2 id="age" class="risk-text-3"></h2>
+                <h2 id="height" class="risk-text-3"></h2>
+                <h2 id="weight" class="risk-text-3"></h2>
             </div>
         </div>
-        <div class="result-right">
-            <div class="result-right-2">
-                <div class="result-right-block">
-                    <div class="risk-block-2">
-                        <div class="risk-header-2">
-                            <h3 class="risk-right-header">ระดับ<br>ความดันโลหิต</h3>
-                        </div>
-                        <div class="risk-pic">
-                            <img src="Http pic\hypertension.png">
-                        </div>
-                        <h2 class="risk-text-4" id="sbp-text"></h2>
-                    </div>
+        <div class="result-block-2">
+            <div class="result-block-1">
+                <div class="risk-header-2">
+                    <h3 class="risk-text">ระดับ<br>ความดันโลหิต</h3>
                 </div>
-                <div class="result-right-block">
-                    <div class="risk-block-2">
-                        <div class="risk-header-2">
-                            <h3 class="risk-right-header">ระดับ<br>น้ำตาลในเลือด</h3>
-                        </div>
-                        <div class="risk-pic">
-                            <img src="Http pic\blood-test.png">
-                        </div>
-                        <h2 class="risk-text-4" id="fpg-text"></h2>
-                    </div>
+                <div class="risk-pic">
+                    <img src="Http pic\hypertension.png" style="width: 90%;height: 90%;">
                 </div>
+                <h2 class="risk-text-4" id="sbp-text"></h2>
             </div>
-            <div class="result-right-2">
-                <div class="result-right-block">
-                    <div class="risk-block-2">
-                        <div class="risk-header-2">
-                            <h3 class="risk-right-header">ระดับ<br>คอลเลสเตอรอล</h3>
-                        </div>
-                        <div class="risk-pic">
-                            <img src="Http pic\cholesterol.png">
-                        </div>
-                        <h2 class="risk-text-4" id="ldl-text"></h2>
-                    </div>
+            <div class="result-block-1">
+                <div class="risk-header-2">
+                    <h3 class="risk-text">ระดับ<br>น้ำตาลในเลือด</h3>
                 </div>
-                <div class="result-right-block">
-                    <div class="risk-block-2">
-                        <div class="risk-header-2">
-                            <h3 class="risk-right-header">กิจกรรมทางกาย</h3>
-                        </div>
-                        <div class="risk-pic">
-                            <img src="Http pic\jogging.png">
-                        </div>
-                        <h2 class="risk-text-4" id="act-text"></h2>
-                    </div>
+                <div class="risk-pic">
+                    <img src="Http pic\blood-test.png" style="width: 90%;height: 90%;">
                 </div>
+                <h2 class="risk-text-4" id="fpg-text"></h2>
             </div>
-            <div class="result-right-2">
-                <div class="result-right-block">
-                    <div class="risk-block-2">
-                        <div class="risk-header-2">
-                            <h3 class="risk-right-header">พฤติกรรม<br>การสูบบุหรี่</h3>
-                        </div>
-                        <div class="risk-pic">
-                            <img src="Http pic\ashtray.png">
-                        </div>
-                        <h2 class="risk-text-4" id="smk-text"></h2>
-                    </div>
+            <div class="result-block-1">
+                <div class="risk-header-2">
+                    <h3 class="risk-text">ระดับ<br>คอลเลสเตอรอล</h3>
                 </div>
-                <div class="result-right-block">
-                    <div class="risk-block-2">
-                        <div class="risk-header-2">
-                            <h3 class="risk-right-header">ปริมาณ<br>แอลกอฮอล์</h3>
-                        </div>
-                        <div class="risk-pic">
-                            <img src="Http pic\liquor.png">
-                        </div>
-                        <h2 class="risk-text-4" id="alc-text"></h2>
-                    </div>
+                <div class="risk-pic">
+                    <img src="Http pic\cholesterol.png" style="width: 90%;height: 90%;">
                 </div>
+                <h2 class="risk-text-4" id="ldl-text"></h2>
+            </div>
+            <div class="result-block-1">
+                <div class="risk-header-2">
+                    <h3 class="risk-text">กิจกรรม<br>ทางกาย</h3>
+                </div>
+                <div class="risk-pic">
+                    <img src="Http pic\jogging.png" style="width: 90%;height: 90%;">
+                </div>
+                <h2 class="risk-text-4" id="act-text"></h2>
+            </div>
+            <div class="result-block-1">
+                <div class="risk-header-2">
+                    <h3 class="risk-text">พฤติกรรม<br>การสูบบุหรี่</h3>
+                </div>
+                <div class="risk-pic">
+                    <img src="Http pic\ashtray.png" style="width: 90%;height: 90%;">
+                </div>
+                <h2 class="risk-text-4" id="smk-text"></h2>
+            </div>
+            <div class="result-block-1">
+                <div class="risk-header-2">
+                    <h3 class="risk-text">ปริมาณ<br>แอลกอฮอล์</h3>
+                </div>
+                <div class="risk-pic">
+                    <img src="Http pic\liquor.png" style="width: 90%;height: 90%;">
+                </div>
+                <h2 class="risk-text-4" id="alc-text"></h2>
             </div>
         </div>
     </div>
-    <h1 class="topic">ผลการประเมิน</h1>
+    
+    <div class="topic">ผลการประเมิน</div>
     <div class="conclusion">
         <div class="cake">
             <img src="Http pic\cake.png">
         </div>
         <div class="conclusion-text-block">
-            <p class="conclusion-text" id="line-1">คุณมีโอกาสเป่าเค้กได้ถึงอายุ <span id="total-age"></span> ปีหรืออีก <span id="up-age"></span> รอบ</p>
-            <p class="conclusion-text">โดยประเมินจากข้อมูลพฤติกรรมสุขภาพของคุณ</p>
-            <p class="conclusion-text">หากต้องการมีสุขภาพได้ดีและอายุที่ยืนนานแนะนำให้</p>
-            <p class="conclusion-text"><span id="risk-rd"></span> </p>
-            <p class="conclusion-text">เพื่อสุขภาพที่ดีของคุณเอง</p>
+            <p class="conclusion-text">คุณมีโอกาสเป่าเค้กได้ถึงอายุ <span id="total-age"></span> หรืออีก <span id="up-age"></span> รอบ โดยประเมินจากข้อมูลพฤติกรรมสุขภาพของคุณ</p>
+            <p class="conclusion-text-2">หากต้องการมีสุขภาพได้ดีและอายุที่ยืนนานแนะนำให้ <span id="risk-rd"></span> </p> <!--เพื่อสุขภาพที่ดีของคุณเอง-->
         </div>
     </div>
-    <h2 class="sg-topic">พฤติกรรมที่มีผลต่ออายุของคุณ</h2>
+    <div class="sg-topic">ปัจจัยเสี่ยงที่ส่งผลต่ออายุคาดเฉลี่ยของคุณ</div>
     <div class="sg-risk-grid">
         <div class="sg-risk-frame" id="fpg-block">
             <h1 class="sg-risk-name">ระดับ<br>น้ำตาลในเลือด</h1>
             <div class="sg-risk-pic">
-                <img src="Http pic\blood-test.png">
+                <img src="Http pic\blood-test.png" style="width:70%; height: 70%;">
             </div>
-            <h1 class="sg-risk-num">+<span class="risk-up-age" id="fpg-up-age">1</span>ปี</h1>
+            <h1 class="sg-risk-num">+<span class="risk-up-age" id="fpg-up-age"></span></h1>
         </div>
         <div class="sg-risk-frame"  id="sbp-block">
-            <h1 class="sg-risk-name">ระดับ<br>ความดันโลหิต</h1>
+            <h1 class="sg-risk-name">ระดับความ<br>ดันโลหิต</h1>
             <div class="sg-risk-pic">
-                <img src="Http pic\hypertension.png">
+                <img src="Http pic\hypertension.png" style="width:70%; height: 70%;">
             </div>
-            <h1 class="sg-risk-num">+<span class="risk-up-age" id="sbp-up-age">1</span>ปี</h1>
+            <h1 class="sg-risk-num">+<span class="risk-up-age" id="sbp-up-age"></span></h1>
         </div>
         <div class="sg-risk-frame"  id="ldl-block">
-            <h1 class="sg-risk-name">ระดับ<br>คอลเลสเตอรอล</h1>
+            <h1 class="sg-risk-name">ระดับคอล<br>เลสเตอรอล</h1>
             <div class="sg-risk-pic">
-                <img src="Http pic\cholesterol.png">
+                <img src="Http pic\cholesterol.png" style="width:70%; height: 70%;">
             </div>
-            <h1 class="sg-risk-num">+<span class="risk-up-age" id="ldl-up-age">1</span>ปี</h1>
+            <h1 class="sg-risk-num">+<span class="risk-up-age" id="ldl-up-age"></span></h1>
         </div>
         <div class="sg-risk-frame"  id="act-block">
             <h1 class="sg-risk-name">กิจกรรม<br>ทางกาย</h1>
             <div class="sg-risk-pic">
-                <img src="Http pic\jogging.png">
+                <img src="Http pic\jogging.png" style="width:70%; height: 70%;">
             </div>
-            <h1 class="sg-risk-num">+<span class="risk-up-age" id="act-up-age">1</span>ปี</h1>
+            <h1 class="sg-risk-num">+<span class="risk-up-age" id="act-up-age"></span></h1>
         </div>
         <div class="sg-risk-frame"  id="smk-block">
             <h1 class="sg-risk-name">พฤติกรรม<br>การสูบบุหรี่</h1>
             <div class="sg-risk-pic">
-                <img src="Http pic\ashtray.png">
+                <img src="Http pic\ashtray.png" style="width:70%; height: 70%;">
             </div>
-            <h1 class="sg-risk-num">+<span class="risk-up-age" id="smk-up-age">1</span>ปี</h1>
+            <h1 class="sg-risk-num">+<span class="risk-up-age" id="smk-up-age"></span></h1>
         </div>
         <div class="sg-risk-frame"  id="alc-block">
             <h1 class="sg-risk-name">ปริมาณ<br>แอลกอฮอล์</h1>
             <div class="sg-risk-pic">
-                <img src="Http pic\liquor.png">
+                <img src="Http pic\liquor.png" style="width:70%; height: 70%;">
             </div>
-            <h1 class="sg-risk-num">+<span class="risk-up-age" id="alc-up-age">1</span>ปี</h1>
+            <h1 class="sg-risk-num">+<span class="risk-up-age" id="alc-up-age"></span></h1>
         </div>
         <div class="sg-risk-frame"  id="bmi-block">
             <h1 class="sg-risk-name">ดัชนีมวลกาย<br>(BMI)</h1>
             <div class="sg-risk-pic">
-                <img src="Http pic\BMI.png">
+                <img src="Http pic\BMI.png" style="width:30%; height: 70%;">
             </div>
-            <h1 class="sg-risk-num">+<span class="risk-up-age" id="bmi-up-age">1</span>ปี</h1>
+            <h1 class="sg-risk-num">+<span class="risk-up-age" id="bmi-up-age"></span></h1>
         </div>
     </div>
-    <h2 class="sg-topic" id="sg-topic-2">การเปรียบเทียบอายุของคุณกับผู้ที่สุขภาพแข็งแรง</h2>
-    <p id="sg-text">คือการนำอายุของคุณมาเปรียบเทียบกับผู้ที่มีสุขภาพแข็งแรงโดยไม่มีปัจจัยเกี่ยวกับพฤติกรรมที่มีผลต่ออายุ 
-        เพื่อเป็นแนวทางการดูแลสุขภาพและหลีกเลี่ยงพฤติกรรมที่ไม่ดีต่อสุขภาพของคุณในด้านต่างๆ</p>
+    <div class="sg-topic" id="sg-topic-2">อายุคาดเฉลี่ยของคุณเมื่อเปรียบเทียบกับบุคคลที่ไม่มีปัจจัยเสี่ยงทางด้านสุขภาพ</div>
+    <p id="sg-text">อายุคาดเฉลี่ยของคุณคือ 65 ปี โดยคาดการณ์ว่าคุณจะมีอายุได้ถึง 81.5 ปี แต่หากเปรียบเทียบกับบุคคลที่ไม่มีปัจจัยเสี่ยงทางด้านสุขภาพ
+                    และมีการดูแลตัวเองอย่างสม่ำเสมอ ผลการวิใจควาดการณ์ว่าคุณจะมีอายุเพิ่มขึ้นได้อีก 5 ปี
+    </p>
     <div id="cp">
         <div id="curr-age" ></div>
         <p id="best-age">อายุ <span id="best-le-value"></span> ปี</p>
     </div>
     <p id="curr-age-text">อายุที่คาดว่าจะอยู่ถึง <span id="le-value"></span> ปี</p>
-    <a href="index.html">
-        <button class="start-button" type="button" id="next-button">เริ่มทำแบบประเมินอีกครั้ง &#8634;</button>
-    </a>
+    <!--
+    <div class="row-button">
+        <button class="start-button" type="button" onclick="document.location='index.html'">เริ่มทำแบบประเมินอีกครั้ง &#8634;</button>
+    </div> 
     <div class="footer">
         <div class="footer-1">
             <div class="text-footer">
-                <p class="ft-1">Content by</p>
-                <p class="ft-1">แผนงานพัฒนาดัชนีภาระโรคแห่งประเทศไทย</p>
+                <p class="ft-1">Content by<br>แผนงานพัฒนาดัชนีภาระโรคแห่งประเทศไทย</p>
             </div>
             <div class="text-footer">
-                <p class="ft-1">Supported by</p>
-                <p class="ft-1">สำนักงานคณะกรรมการส่งเสริมวิทยาศาสตร์ วิจัยและนวัตกรรม (สกสว.)</p>
-            </div>  
+                <p class="ft-1">Supported by<br>สำนักงานคณะกรรมการส่งเสริมวิทยาศาสตร์ วิจัยและนวัตกรรม (สกสว.)</p>
+            </div>
         </div>
         <div class="footer-2"> 
-            <img src="Logo\IHPP edit.png" class="logo">
-            <img src="Logo\BOD_rm_bg.png" class="logo">
-            <img src="Logo\logo MOPH.png" class="logo">
-            <img src="Logo\TSRI_Logo-Original_08.png" class="logo">
-            <img src="Logo\ThaiHealth.png" class="logo">
+            <div class="logo-grid"><img src="Logo\IHPP edit.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\BOD_rm_bg.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\logo MOPH.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\TSRI_Logo-Original_08.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\ThaiHealth.png" class="logo"></div> 
         </div>
-    </div>
+    </div>-->
     <script src="script_5.js"></script>
 </body>
 </html>

@@ -66,23 +66,23 @@ if (storeSBP < 120) {
 const FPGmgdl = storeFPG * 18;
 if (FPGmgdl < 100) {
     document.getElementById("fpg-text").innerHTML = "ปกติ";
-    document.getElementById('fpg-block').style.display ='none';
+    document.getElementById('fpg-block').style.display ='block';
 } else if (FPGmgdl >= 100 && FPGmgdl < 126) {
     document.getElementById("fpg-text").innerHTML = "เสี่ยงเป็นโรคเบาหวานแฝง";
-    document.getElementById('fpg-block').style.display ='none';
+    document.getElementById('fpg-block').style.display ='block';
 } else if (FPGmgdl >= 126) {
     document.getElementById("fpg-text").innerHTML = "เสี่ยงเป็นโรคเบาหวานสูง";
     risk_factor.push('ลดระดับน้ำตาลในเลือด');
-    document.getElementById('fpg-block').style.display ='flex';
+    document.getElementById('fpg-block').style.display ='block';
 }
 
 const LDLmgdl = storeLDL * 38.6;
 if (LDLmgdl < 130) {
     document.getElementById("ldl-text").innerHTML = "ปกติ";
-    document.getElementById('ldl-block').style.display ='none';
+    document.getElementById('ldl-block').style.display ='block';
 } else if (LDLmgdl >= 130 && LDLmgdl < 160) {
     document.getElementById("ldl-text").innerHTML = "ค่อนข้างสูง";
-    document.getElementById('ldl-block').style.display ='none';
+    document.getElementById('ldl-block').style.display ='block';
 } else if (LDLmgdl >= 160) {
     document.getElementById("ldl-text").innerHTML = "สูง";
     risk_factor.push('ลดระดับคอลเลสเตอรอล');
@@ -131,12 +131,12 @@ document.getElementById("up-age").innerHTML = le_value.toFixed(0);
 //act >= 4200
 const le_act_value = cal_le(4200, storeALC, storeWeight, storeHeight, storeFPG, storeLDL, storeSBP, storeSmokeStatus, 
     storeSmokeRoll, storeSmokeYos, storeSmokeYoq, storeGender, storeAge)
-document.getElementById("act-up-age").innerHTML = (le_act_value - le_value).toFixed(2);
+document.getElementById("act-up-age").innerHTML = " " + (le_act_value - le_value).toFixed(0) + " เดือน";
 
 //Alcohol 0 g/day
 const le_alc_value = cal_le(storeACT, 0, storeWeight, storeHeight, storeFPG, storeLDL, storeSBP, storeSmokeStatus, 
     storeSmokeRoll, storeSmokeYos, storeSmokeYoq, storeGender, storeAge)
-document.getElementById("alc-up-age").innerHTML = (le_alc_value - le_value).toFixed(2);
+document.getElementById("alc-up-age").innerHTML = (le_alc_value - le_value).toFixed(0) + "ปี" ;
 
 //BMI <= 21 kg/m2
 const le_bmi_value = cal_le(storeACT, storeALC, 21, 100, storeFPG, storeLDL, storeSBP, storeSmokeStatus, 
@@ -146,7 +146,7 @@ document.getElementById("bmi-up-age").innerHTML = (le_bmi_value - le_value).toFi
 //SBP <= 115 mmHg
 const le_sbp_value = cal_le(storeACT, storeALC, storeWeight, storeHeight, storeFPG, storeLDL, 115, storeSmokeStatus, 
     storeSmokeRoll, storeSmokeYos, storeSmokeYoq, storeGender, storeAge)
-document.getElementById("sbp-up-age").innerHTML = (le_sbp_value - le_value).toFixed(2);
+document.getElementById("sbp-up-age").innerHTML = (le_sbp_value - le_value).toFixed(2) + "ปี";
 
 //FPG <= 4.9 mmol/
 const le_fpg_value = cal_le(storeACT, storeALC, storeWeight, storeHeight, 4.9, storeLDL, storeSBP, storeSmokeStatus, 

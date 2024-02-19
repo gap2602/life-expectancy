@@ -2,113 +2,101 @@ h1,h2,h3,h4,p{
     margin: 0px;
 }
 
-body,.start-button, select {
+body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, .answer-number-alc::placeholder, select{
     font-family: 'IBM Plex Sans Thai';
+    text-align: center;
 }
 
 .header {
     display: flex;
+    width: 100%;
     height: 120px;
     margin-top: 20px;
 }
 
 .arrow-frame {
-    width: 15%;
-    height: 120px;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    min-width: 60px;
     box-sizing: border-box;
     text-align: center;
+    align-items: center;
+    
 }
 
 #arrow-circle {
-    background: #2F6690;
-    border-radius: 50%;
-    width: 60px;
-    height: 50%;
     margin: 0 auto;
     text-align: center;
 }
 
 .arrow {
-    font-size: 35px;
+    display: flex;
+    font-size: 2em;
+    box-sizing: border-box;
+    background-color: #2F6690;
+    border: solid #2F6690;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    min-width: 60px;
+    max-width: 60px;
     color: white;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     text-decoration: none; 
+    cursor: pointer;
 }
 
 #previous {
-    
     margin: 3% auto;
     text-align: center;
     font-weight: 600;
 }
 
-.step-wizard {
-    height: 120px;
-    width: 85%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.step-topic{
+    display: grid;
+    width: 80%;
+    grid-template-columns: 25% 25% 25% 25%;
+    box-sizing: border-box;
 }
 
-.step-wizard-list{
-    background: #fff;
-    color: #333;
-    list-style-type: none;
-    border-radius: 10px;
-    display: flex;
-    padding: 20px 10px;
-    position: relative;
-    z-index: 10;
-}
-
-.step-wizard-item{
-    padding: 0 20px;
-    flex-basis: 0;
-    -webkit-box-flex: 1;
-    -ms-flex-positive:1;
-    flex-grow: 1;
-    max-width: 100%;
+.topic-circle {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    min-width: 170px;
-    position: relative;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
 }
 
-.step-wizard-item + .step-wizard-item:after{
+.topic-circle + .topic-circle:after{
     content: "";
-    position: absolute;
-    left: 0;
-    top: 20px;
     background: #6D6D6D;
     width: 100%;
     height: 4px;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-500%);
     z-index: -10;
+    box-sizing: border-box;
 }
 
-.progress-count{
-    height: 40px;
-    width: 40px;
+.circle {
     display: flex;
+    border: solid #6D6D6D;
+    border-radius: 50%;
+    box-sizing: border-box;
+    min-width: 40px;
+    max-width: 40px;
+    aspect-ratio: 1;
+    margin-bottom: 0px;
+    background-color: white;
     align-items: center;
     justify-content: center;
-    border: solid #6D6D6D;
-    background-color: white;
-    border-radius: 50%;
-    font-size: 30px;
-    font-weight: 600;
-    margin: 0 auto;
-    position: relative;
-    z-index:10;
-    color: black;
+    font-size: 1.5em;
 }
 
-.progress-label{
-    
-    font-size: 14px;
+.topic-list {
+    font-size: 0.8em;
     font-weight: 600;
-    margin-top: 10px;
+    box-sizing: border-box;
 }
 
 #current {
@@ -124,150 +112,134 @@ body,.start-button, select {
 }
 
 .topic {
-    
-    font-size: 60px;
+    display: flex;
+    font-size: 2em;
     font-weight: 700;
+    text-align: left;
+    align-items: end;
     color: #2F6690;
     height: 100px;
     border-bottom: solid #2F6690 5px;
-    width: 70%;
+    width: 90%;
     margin: 20px auto;
 }
 
-.result-frame {
-    display: flex;
-    height: 750px;
-    width: 70%;
+.result-block {
+    display: grid;
+    width: 90%;
+    height: fit-content;
     margin: 20px auto;
 }
 
-.result-left {
+.result-block-1 {
     box-sizing: border-box;
-    width: 50%;
-}
-
-.result-right {
-    box-sizing: border-box;
-    width: 50%;
-}
-
-.result-right-2 {
-    display: flex;
-    box-sizing: border-box;
-    height: 250px;
-}
-
-.risk-block {
-    overflow: auto;
-    box-sizing: border-box;
+    width: 100%;
+    aspect-ratio: 0.8;
+    height: fit-content;
+    max-height: 100px;
     background-color: #C7EEFF;
-    border-radius: 30px;
-    margin: 20px 10% 20px 10%;
-    height: 710px;
-    box-shadow: 5px 5px #E6E6E6;
+    border-radius: 15px;
+    box-shadow: 0.2em 0.2em #E6E6E6;
+    align-items: center;
 }
+
+.result-block-2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.result-block-2 > .result-block-1 {
+    margin: 5px 5px 0px 5px;
+    width: calc(100% - 10px);
+}
+
 
 .risk-header {
     box-sizing: border-box;
     background-color: white;
     border-radius: 15px;
-    width: 80%;
+    width: 90%;
     height: 100px;
-    margin: 20px auto;
-    box-shadow: 5px 5px #E6E6E6;
+    margin: 10px auto;
+    box-shadow: 0.2em 0.2em #E6E6E6;
 }
 
 .risk-text {
-    font-size: 30px;
+    font-size: 1.5em;
     font-weight: 600;
     color: #2F6690;
     text-align: center;
 }
 
 .risk-text-2 {
-    font-size: 20px;
+    font-size: 1em;
     font-weight: 500;
     color: #2F6690;
     text-align: center;
 }
 
 .risk-text-3 {
-    font-size: 15px;
+    font-size: 0.8em;
     font-weight: 500;
     color: #2F6690;
     margin-left: 5px;
-}
-
-.risk-body {
-    box-sizing: border-box;
-    height: 550px;
-    background-image: url("Http pic/1-removebg-preview.png");
-    background-size:     cover;                     
-    background-repeat:   no-repeat;
-    background-position: center center;  
-}
-
-.result-right-block {
-    box-sizing: border-box;
-    height: 250px;
-    width: 50%;
-}
-
-.risk-block-2 {
-    overflow: auto;
-    box-sizing: border-box;
-    background-color: #C7EEFF;
-    border-radius: 15px;
-    margin: 10px 10% 10px 10%;
-    height: 230px;
-    box-shadow: 5px 5px #E6E6E6;
-}
-
-.risk-header-2 {
-    overflow: auto;
-    display: flex;
-    box-sizing: border-box;
-    background-color: white;
-    border-radius: 15px;
-    width: 80%;
-    height: 70px;
-    margin: 5px auto;
-    box-shadow: 5px 5px #E6E6E6;
-}
-
-.risk-pic {
-    width: 100%;
-    height: 120px;
-}
-
-.risk-pic > img {
-    height: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.risk-right-header {
-    color: #2F6690;
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center;
-    margin: auto auto;
+    margin-top: 5px;
 }
 
 .risk-text-4 {
     margin-top: 5px;
     color: #2F6690;
-    font-size: 15px;
+    font-size: 0.8em;
     font-weight: 500;
     text-align: center;
 }
 
+.risk-body {
+    box-sizing: border-box;
+    height: 100%;
+    text-align: left;
+    background-image: url("Http pic/2-removebg-preview.png");
+    background-size: contain;                  
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+.risk-header-2 {
+    display: flex;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 15px;
+    width: 90%;
+    margin: 5px auto;
+    justify-content: center;
+    
+}
+
+.risk-header-2 > .risk-text{
+    display: flex;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.risk-pic {
+    display: flex;
+    max-height: 75px;
+    aspect-ratio: 1;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+
+
+
 .conclusion {
     display: flex;
-    width: 70%;
-    height: 270px;
+    width: 90%;
     margin: 20px auto;
+    border: solid black;
 }
 
 .cake {
@@ -275,40 +247,42 @@ body,.start-button, select {
     width: 30%;
     display: flex;
     justify-content: center;
+    border: solid black;
 }
 
 .cake > img {
-    height: 70%;
-    display: block;
+    width: 70%;
     margin: auto;
 }
 
 .conclusion-text-block {
     box-sizing: border-box;
     width: 70%;
+    border: solid black;
 }
 
 .conclusion-text {
     box-sizing: border-box;
     color: #2F6690;
-    font-size: 20px;
+    font-size: 1em;
     font-weight: 500;
+    text-align: left;
+    line-height: 150%;
+    border: solid black;
 }
 
-#line-1 {
-    font-weight: 600;
+.conclusion-text-2 {
+    box-sizing: border-box;
+    color: #2F6690;
+    font-size: 1em;
+    font-weight: 500;
+    border: solid black;
 }
 
 #total-age {
     color: #067AD3;
-    font-size: 40px;
+    font-size: 2em;
     font-weight: 700;
-}
-
-#up-age {
-    color: #2F6690;
-    font-size: 20px;
-    font-weight: 600;
 }
 
 #risk-rd {
@@ -318,17 +292,20 @@ body,.start-button, select {
 }
 
 .sg-topic {
-    width: 70%;
-    margin: 50px auto;
+    width: 90%;
+    margin: 20px auto;
     color: #D84727;
-    font-size: 30px;
+    font-size: 1.2em;
     font-weight: 700;
+    text-align: left;
+    border: solid black;
 }
 
 .sg-risk-grid {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    width: 70%;
+    grid-auto-rows: minmax(auto);
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -336,35 +313,43 @@ body,.start-button, select {
     box-sizing: border-box;
     border: solid #ffe4e1;
     color: #D84727;
-    font-size: 25px;
+    font-size: 1em;
     font-weight: 700;
+    align-items: center;
     justify-items: center;
     text-align: center;
     margin: 10px auto;
-    border-radius: 20px;
-    border-width: 10px;
-    width: 90%;
-    height: 280px;
-}
-
-.sg-risk-name {
-    font-size: 25px;
-    font-weight: 700;
+    border-radius: 10px;
+    border-width: 7px;
+    width: 95%;
+    max-height: 250px;
 }
 
 .sg-risk-pic {
     display: flex;
     box-sizing: border-box;
     justify-content: center;
+    align-items: center;
     margin-top: 5%;
-    height: 30%;
+    width: 100%;
+    aspect-ratio: 1;
+    max-height: 125px;
+    margin: 0 auto;
+    border: solid black;
+}
+
+.sg-risk-name {
+    font-size: 0.8em;
+    font-weight: 700;
 }
 
 .sg-risk-num {
+    font-size: 0.8em;
     margin-top: 5%;
 }
 
 .risk-up-age {
+    font-size: 0.8em;
     margin-right: 10px;
 }
 
@@ -373,12 +358,55 @@ body,.start-button, select {
 }
 
 #sg-text {
-    width: 70%;
+    width: 90%;
+    text-align: left;
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 0.8em;
     font-weight: 500;
     color: #067AD3;
+    text-indent: 1em;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #cp {
     display: flex;
@@ -517,12 +545,15 @@ body,.start-button, select {
     align-items: center;
 }
 */
-.start-button {
-    overflow: auto;
+.row-button {
     display: flex;
-    font-family: 'IBM Plex Sans Thai';
+    width: 100%;
+    text-decoration: none;
+}
+
+.start-button {
     font-weight: 500;
-    font-size: 30px;
+    font-size: 1em;
     background-color: #067AD3;
     box-sizing: border-box;
     color: white;
@@ -530,15 +561,10 @@ body,.start-button, select {
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     cursor: pointer;
-    width: 40%;
+    width: 50%;
     height: 60px;
-    margin: 30px auto;
-    justify-content: center;
+    margin: 3% auto 3%;
     align-items: center;
-}
-
-a {
-    text-decoration: none;
 }
 
 .footer {
@@ -546,21 +572,13 @@ a {
     background:#DEF5FF;
     width: 100%;
     height: 200px;
-    margin-top: 3%;
-    box-sizing: border-box;
+    margin-top: 20px;
 }
 
 .footer-1 {
-    width: 60%;
+    width: 40%;
     height : 200px;
-}
-
-.footer-2 {
-    display: flex;
-    width: 100%;
-    height : 200px;
-    align-items: center;
-    justify-content: center;
+    box-sizing: border-box;
 }
 
 .text-footer {
@@ -570,14 +588,179 @@ a {
 }
 
 .ft-1 {
-    font-family: 'IBM Plex Sans Thai';
     font-weight: 400;
     color: #2F6690;
-    font-size: 20px;
-    padding-left: 30px;
+    font-size: 0.4em;
+    text-align: left;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.footer-2 {
+    display: grid;
+    grid-template-columns: 30% 30% 30% ;
+    box-sizing: border-box;
+    height: 100%;
+    width: 60%;
+    aspect-ratio: 5;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-grid {
+    display: flex;
+    max-height: 100px;
+    aspect-ratio: 1;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 .logo {
-    height: 100px;
-    margin-left: 3%;
+    width: 80%;
+}
+
+@media only screen and (max-width: 320px) {
+    .start-button {
+        font-size: 1em;
+        width: 50%;
+    }
+
+    .footer-1 {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 320px) {
+    .start-button {
+        font-size: 1em;
+        width: 40%;
+    }
+
+    .sg-risk-name {
+        font-size: 0.7em;
+    }
+
+    .sg-risk-num, .risk-up-age {
+        font-size: 0.8em;
+    }
+
+    .footer-1 {
+        width: 30%;
+    }
+
+    .ft-1 {
+        font-size: 0.6em;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .topic-list {
+        font-size: 1em;
+    }
+
+    .topic{
+        width: 80%;
+    }
+
+    .result-block {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .risk-text {
+        font-size: 1.7em;
+        font-weight: 600;
+    }
+    
+    .risk-text-2 {
+        font-size: 1.2em;
+        font-weight: 500;
+
+    }
+    
+    .risk-text-3, .risk-text-4 {
+        font-size: 1em;
+        font-weight: 500;
+    }
+
+    .risk-header-2 > .risk-text{
+        font-size: 1em;
+        font-weight: 700;
+    }
+
+    .result-block > .result-block-1{
+        height: 650px;
+        max-height: none;
+    }
+
+    .result-block-2 > .result-block-1 {
+        height: 210px;
+        max-height: none;
+        margin: 5px 0px 0px 10px;
+    }
+
+    .risk-pic {
+        max-height: 100px;
+    }
+
+    .risk-body {
+        background-size: auto;                  
+    }
+
+    .conclusion, .sg-topic, .sg-risk-grid, #sg-text {
+        width: 80%;
+    }
+
+    .sg-risk-name, .sg-risk-num, .risk-up-age, #sg-text {
+        font-size: 1em;
+    } 
+
+    .start-button {
+        font-size: 1.3em;
+        width: 30%;
+    }
+
+    .ft-1 {
+        font-size: 0.7em;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .topic{
+        width: 70%;
+    }
+
+    .result-block {
+        width: 70%;
+    }
+
+    .conclusion, .sg-topic, .sg-risk-grid, #sg-text {
+        width: 70%;
+    }
+
+    .sg-risk-name, .sg-risk-num, .risk-up-age, #sg-text {
+        font-size: 1.2em;
+    }
+    
+    .start-button {
+        font-size: 1.5em;
+        width: 20%;
+    }
+
+    .ft-1 {
+        font-size: 1em;
+    }
+
+    .footer-2 {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+    }
+
+    .logo-grid {
+        max-height: 200px;
+    }
 }
