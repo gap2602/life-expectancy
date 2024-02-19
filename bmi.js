@@ -11,7 +11,7 @@ function rr_bmi(weight_value, height_value) {
     }
 
     if (Math.floor((bmi - 21)/5) > 0) {
-        used_value_2 = bmi - 21;
+        used_value_2 = Math.floor((bmi - 21)/5);
     } else {
         used_value_2 = 0
     }

@@ -122,7 +122,7 @@ function rr_combine() {
         dr_sum[i] = sum_ar;
     }
 
-    result.textContent = `Your combine is ${all_rr_adj_dr} , ${dr_sum} years`;
+    result.textContent = `Your combine is ${all_rr_combine} years`;
 
     return all_rr_adj_dr;
 }

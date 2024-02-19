@@ -50,7 +50,7 @@ function rr_fpg() {
         }
     }
     
-    result.textContent = `Your FPG is ${fpg_rr_adj.slice(0, fpg_diseases.length * 2)} Unit`;
+    result.textContent = `Your FPG is ${fpg_rr_adj} Unit`;
 
     return [fpg_diseases, fpg_rr_adj];
 }

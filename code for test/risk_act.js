@@ -57,7 +57,7 @@ function rr_act() {
         }
     }
 
-    result.textContent = `Your alcohol is ${act_rr_adj.slice(0, act_diseases.length * 2)} Unit`;
+    result.textContent = `Your alcohol is ${act_rr_adj} Unit`;
 
     return [act_diseases, act_rr_adj];
 

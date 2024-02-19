@@ -12,7 +12,7 @@ function rr_bmi() {
     }
 
     if (Math.floor((bmi - 21)/5) > 0) {
-        used_value_2 = bmi - 21;
+        used_value_2 = Math.floor((bmi - 21)/5);
     } else {
         used_value_2 = 0
     }
@@ -56,7 +56,7 @@ function rr_bmi() {
         }
     }
 
-    result.textContent = `Your BMI is ${bmi_rr_adj.slice(0, bmi_diseases.length * 2)} Unit`;
+    result.textContent = `Your BMI is ${bmi_rr_adj} Unit`;
 
     return [bmi_diseases, bmi_rr_adj];
 
