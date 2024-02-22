@@ -58,7 +58,7 @@ document.getElementById("age").innerHTML = "อายุ : " + storeAge + " ป�
 document.getElementById("height").innerHTML = "ส่วนสูง : " + storeHeight + " เซนติเมตร";
 document.getElementById("weight").innerHTML = "น้ำหนัก : " + storeWeight + " กิโลกรัม";
 
-var risk_factor = [];
+var risk_factor = ["หากต้องการมีสุขภาพได้ดีและอายุที่ยืนนานแนะนำให้"];
 
 if (storeSmokeStatus == "never") {
     document.getElementById("smk-text").innerHTML = "ไม่สูบบุหรี่";
@@ -111,7 +111,7 @@ if (storeACT < 600) {
 } else if (storeACT >= 1500 ) {
     document.getElementById("act-text").innerHTML = "ระดับมาก";
     document.getElementById('act-block').style.display ='none';
-    risk_factor.push('รักษาความสม่ำเสมอในการมีกิจกรรมทางกายอย่างต่อเนื่อง');
+    //risk_factor.push('รักษาความสม่ำเสมอในการมีกิจกรรมทางกายอย่างต่อเนื่อง');
 }
 
 if (storeSBP < 120) {
@@ -164,6 +164,11 @@ if (LDLmgdl < 130) {
 
 if (storeSBP >= 159 || FPGmgdl >= 126 || LDLmgdl >= 160) {
     risk_factor.push('และพบแพทย์');
+}
+
+console.log(risk_factor)
+if (risk_factor.length == 1) {
+    risk_factor = ["ผลการประเมินสุขภาพของคุณอยู่ในเกณฑ์ปกติดี หมั่นรักษาสุขภาพเพื่อให้มีอายุที่ยืนยาว"]
 }
 
 document.getElementById("alc-text").innerHTML = storeALC.toString() + " กรัมต่อวัน";

@@ -33,13 +33,13 @@
     <div class="main-content">
         <div class="input-side">
             <h1 class="question">เพศ</h1>
-            <form class="answer">
+            <div class="answer">
                 <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="gender-w"></i>
                 <input class="question-radio" type="radio" name="gender" value="female"/>
                 <label class="gender" for="female" id="female">หญิง</label>
                 <input class="question-radio" type="radio" name="gender" value="male"/>
                 <label class="gender" for="male" id="male">ชาย</label>
-            </form>
+            </div>
             <h1 class="question">อายุ</h1>
             <div class="answer">
                 <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="age-w"></i>
@@ -55,7 +55,8 @@
                 <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="weight-w"></i>
                 <input class="answer-number" type="number" placeholder="น้ำหนักของคุณ" id="weight" onchange="cal_bmi()" onfocus="this.placeholder=''" onblur="this.placeholder='น้ำหนักของคุณ'"/> กิโลกรัม
             </div>
-            <span id="range-warning">กรุณากรอกช่วงอายุระหว่าง 25 - 100 ปี</span>
+            <h1 class="question"></h1>
+            <div id="range-warning">กรุณากรอกช่วงอายุระหว่าง 25 - 100 ปี</div>
         </div>
         <div class="result-side">
             <div class="result-topic">ค่า BMI ของคุณคือ :</div>

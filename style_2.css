@@ -169,6 +169,7 @@ body,.start-button, .answer-number::placeholder {
     font-weight: 400;
     color: #6D6D6D;
     align-items: center;
+    gap: 0.5em;
 }
 
 .answer-number {
@@ -203,8 +204,8 @@ body,.start-button, .answer-number::placeholder {
     text-align: center;
     border-radius: 6px;
     position: relative;
-    left: 25%;
-    bottom: 580%;
+    left: 20%;
+    bottom: 710%;
     z-index: 1;
     opacity: 0.7;
 }
@@ -431,18 +432,20 @@ body,.start-button, .answer-number::placeholder {
         font-weight: 400;
     }
     
-    .answer-number::placeholder{
+    .answer-number::placeholder {
         font-size: 1em;
         font-weight: 400;
         padding: 0 auto;
     }
 
-    #range-warning{
+    #range-warning {
         font-size: 0.9em;
         width: 70%;
+        height: 50px;
         min-width: 150px;
-        left: 180%;
-        bottom: 560%;
+        max-width: 170px;
+        bottom: 340%;
+        text-align: center;
     }
     
     #range-warning::before {

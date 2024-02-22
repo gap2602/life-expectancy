@@ -219,6 +219,7 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder {
     text-align: center;
     border-radius: 6px;
     position: relative;
+    top: -5px;
     z-index: 1;
     opacity: 0.7;
     margin: 0 auto;
@@ -232,7 +233,7 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder {
     border-style: solid;
     border-color: red transparent transparent transparent;
     top: 25px;
-    left: -50%;
+    left: -40%;
 }
 
 .conj {
@@ -444,6 +445,16 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder {
         font-weight: 600;
     }
 
+    #range-warning{
+        top: 0px;
+        left: -5%;
+    }
+    
+    #range-warning::after {
+        top: 25px;
+        left: -45%;
+    }
+
     .start-button {
         font-size: 1.3em;
         width: 30%;
@@ -510,8 +521,17 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder {
         flex-direction: row;
         align-items: center;
         justify-content: left;
-        padding-left: 10px;
-        gap: 1em;
+        padding-left: 20px;
+    }
+
+    #range-warning{
+        top: 0px;
+        left: -6%;
+    }
+    
+    #range-warning::after {
+        top: 25px;
+        left: -45%;
     }
     
     .start-button {
