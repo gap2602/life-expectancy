@@ -182,7 +182,7 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder {
 }
 
 .answer-number {
-    text-align: left;
+    text-align: center;
     width: 80%;
     max-width: 200px;
     font-size: 0.8em;
