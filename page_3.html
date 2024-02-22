@@ -33,7 +33,7 @@
     <div class="question-frame">
         <div class="question">1. ระดับความดันโลหิต (SBP)</div>
         <div class="question-warning">*กรอกเฉพาะ <span class="sub-warning">เลขตัวบน</span></div>
-        <div id="range-warning">กรุณากรอกช่วงความดันระหว่าง 90 - 200 ปี</div>
+        <div id="range-warning">กรุณากรอกช่วงความดันระหว่าง 90 - 200 mmHg</div>
         <div class="input-block" id="input-block-sbp">
             <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="sbp-w"></i>
             <input class="answer-number" type="number" placeholder="ระดับความดันโลหิต" id="sbp" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับความดันโลหิต'"> <div class="unit">mmHg (มิลลิเมตรปรอท)</div>
@@ -43,33 +43,31 @@
     <div class="question-frame">
         <div class="question">2. ระดับน้ำตาลในเลือด (FPG)</div>
         <div class="question-warning-2">*กรุณาตรวจสอบ <span class="sub-warning-2">หน่วย</span> ให้ตรงก่อนกรอก</div>
-        <div class="input-block">
-            <div></div>   
-            <div>
+        <div class="input-block"> 
+            <div class="input-block-inner">
                 <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="fpg-w"></i>
                 <input class="answer-number" type="number" placeholder="ระดับน้ำตาลในเลือด" id="fpg-mg" oninput="fpgConverter(this.id,this.value)" onchange="fpgConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับน้ำตาลในเลือด'"> <div class="unit">mg/dl (มิลลิกรัมต่อเดซิลิตร)</div>
             </div>
             <div class="conj">หรือ</div>
-            <div>
+            <div class="input-block-inner">
+                <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="fpg-w-2"></i>
                 <input class="answer-number" type="number" placeholder="ระดับน้ำตาลในเลือด" id="fpg-mmol" oninput="fpgConverter(this.id,this.value)" onchange="fpgConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับน้ำตาลในเลือด'"> <div class="unit">mmol/L (มิลลิโมลต่อลิตร)</div>
             </div>
-            <div></div>
         </div>   
     </div>
     <div class="question-frame">
-        <div class="question">3. ระดับคอลเลสเตอรอล (LDL)</div>
+        <div class="question">3. ระดับคอเลสเตอรอล (LDL)</div>
         <div class="question-warning-2">*กรุณาตรวจสอบ <span class="sub-warning-2">หน่วย</span> ให้ตรงก่อนกรอก</div>
         <div class="input-block">
-            <div></div>
-            <div>
+            <div class="input-block-inner"> 
                 <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="ldl-w"></i>
-                <input class="answer-number" type="number" placeholder="ระดับคอลเลสเตอรอล" id="ldl-mg" oninput="ldlConverter(this.id,this.value)" onchange="ldlConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับคอลเลสเตอรอล'"><div class="unit">mg/dl (มิลลิกรัมต่อเตซิลิตร)</div> 
+                <input class="answer-number" type="number" placeholder="ระดับคอเลสเตอรอล" id="ldl-mg" oninput="ldlConverter(this.id,this.value)" onchange="ldlConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับคอเลสเตอรอล'"><div class="unit">mg/dl (มิลลิกรัมต่อเตซิลิตร)</div> 
             </div>
             <div class="conj">หรือ</div>
-            <div>
-                <input class="answer-number" type="number" placeholder="ระดับคอลเลสเตอรอล" id="ldl-mmol" oninput="ldlConverter(this.id,this.value)" onchange="ldlConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับคอลเลสเตอรอล'"><div class="unit">mmol/L (มิลลิโมลต่อลิตร)</div> 
+            <div class="input-block-inner">
+                <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="ldl-w-2"></i>
+                <input class="answer-number" type="number" placeholder="ระดับคอเลสเตอรอล" id="ldl-mmol" oninput="ldlConverter(this.id,this.value)" onchange="ldlConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับคอเลสเตอรอล'"><div class="unit">mmol/L (มิลลิโมลต่อลิตร)</div> 
             </div>
-            <div></div>
         </div> 
     </div>
     <div class="row-button">
@@ -78,7 +76,7 @@
     <div class="footer">
         <div class="footer-1">
             <div class="text-footer">
-                <p class="ft-1">Content by<br>แผนงานพัฒนาดัชนีภาระโรคแห่งประเทศไทย</p>
+                <p class="ft-1">Content by<br>โครงการเสริมสร้างศักยภาพการศึกษาดัชนีภาระโรคแห่งประเทศไทย (BOD Thailand)</p>
             </div>
             <div class="text-footer">
                 <p class="ft-1">Supported by<br>สำนักงานคณะกรรมการส่งเสริมวิทยาศาสตร์ วิจัยและนวัตกรรม (สกสว.)</p>

@@ -26,9 +26,9 @@
             <p id="previous">ย้อนกลับ</p>
         </div>
         <div class="step-topic">
-            <div class="topic-circle"><div class="circle" id="prev">&#10004;</div></div>
-            <div class="topic-circle"><div class="circle" id="prev">&#10004;</div></div>
-            <div class="topic-circle"><div class="circle" id="prev">&#10004;</div></div>
+            <div class="topic-circle"><div class="circle" id="current">&#10004;</div></div>
+            <div class="topic-circle"><div class="circle" id="current">&#10004;</div></div>
+            <div class="topic-circle"><div class="circle" id="current">&#10004;</div></div>
             <div class="topic-circle"><div class="circle" id="current">&#10004;</div></div>
             <p class="topic-list">ข้อมูลทั่วไป</p>
             <p class="topic-list">ข้อมูลสุขภาพ</p>
@@ -43,7 +43,7 @@
                 <h1 id="gender" class="risk-text"></h1>
                 <h2 id="bmi" class="risk-text-2"></h2>
             </div>
-            <div class="risk-body">
+            <div id="risk-body">
                 <h2 id="age" class="risk-text-3"></h2>
                 <h2 id="height" class="risk-text-3"></h2>
                 <h2 id="weight" class="risk-text-3"></h2>
@@ -70,7 +70,7 @@
             </div>
             <div class="result-block-1">
                 <div class="risk-header-2">
-                    <h3 class="risk-text">ระดับ<br>คอลเลสเตอรอล</h3>
+                    <h3 class="risk-text">ระดับ<br>คอเลสเตอรอล</h3>
                 </div>
                 <div class="risk-pic">
                     <img src="Http pic\cholesterol.png" style="width: 90%;height: 90%;">
@@ -113,7 +113,7 @@
             <img src="Http pic\cake.png">
         </div>
         <div class="conclusion-text-block">
-            <p class="conclusion-text">คุณมีโอกาสเป่าเค้กได้ถึงอายุ <span id="total-age"></span> หรืออีก <span id="up-age"></span> รอบ โดยประเมินจากข้อมูลพฤติกรรมสุขภาพของคุณ</p>
+            <p class="conclusion-text">คุณมีโอกาสเป่าเค้กได้ถึงอายุ <span id="total-age-year"></span> ปี <span id="total-age-month"></span> เดือน หรืออีก <span id="up-age"></span> รอบ โดยประเมินจากข้อมูลพฤติกรรมสุขภาพของคุณ</p>
             <p class="conclusion-text-2">หากต้องการมีสุขภาพได้ดีและอายุที่ยืนนานแนะนำให้ <span id="risk-rd"></span> </p> <!--เพื่อสุขภาพที่ดีของคุณเอง-->
         </div>
     </div>
@@ -127,14 +127,14 @@
             <h1 class="sg-risk-num">+<span class="risk-up-age" id="fpg-up-age"></span></h1>
         </div>
         <div class="sg-risk-frame"  id="sbp-block">
-            <h1 class="sg-risk-name">ระดับความ<br>ดันโลหิต</h1>
+            <h1 class="sg-risk-name">ระดับ<br>ความดันโลหิต</h1>
             <div class="sg-risk-pic">
                 <img src="Http pic\hypertension.png" style="width:70%; height: 70%;">
             </div>
             <h1 class="sg-risk-num">+<span class="risk-up-age" id="sbp-up-age"></span></h1>
         </div>
         <div class="sg-risk-frame"  id="ldl-block">
-            <h1 class="sg-risk-name">ระดับคอล<br>เลสเตอรอล</h1>
+            <h1 class="sg-risk-name">ระดับ<br>คอเลสเตอรอล</h1>
             <div class="sg-risk-pic">
                 <img src="Http pic\cholesterol.png" style="width:70%; height: 70%;">
             </div>
@@ -170,7 +170,7 @@
         </div>
     </div>
     <div class="sg-topic" id="sg-topic-2">อายุคาดเฉลี่ยของคุณเมื่อเปรียบเทียบกับบุคคลที่ไม่มีปัจจัยเสี่ยงทางด้านสุขภาพ</div>
-    <p id="sg-text">อายุคาดเฉลี่ยของคุณคือ <span class="last-age-sec" id="last-le-age"></span> โดยคาดการณ์ว่าคุณจะมีอายุได้ถึง <span class="last-age-sec" id="last-tt-age"></span> แต่หากเปรียบเทียบกับบุคคลที่ไม่มีปัจจัยเสี่ยงทางด้านสุขภาพ
+    <p id="sg-text">จากผลการประเมินที่คาดการณ์ไว้ว่าคุณจะมีอายุคาดเฉลี่ยอยู่ที่ <span class="last-age-sec" id="last-tt-age"></span> แต่หากเปรียบเทียบกับบุคคลที่ไม่มีปัจจัยเสี่ยงทางด้านสุขภาพ
                     และมีการดูแลตัวเองอย่างสม่ำเสมอ ผลการวิจัยคาดการณ์ว่าคุณจะมีอายุเพิ่มขึ้นได้อีก <span class="last-age-sec" id="last-diff-age"></span>
     </p>
     <div class = "cp-frame">
@@ -179,14 +179,18 @@
         </div>
         <p id="best-age">อายุ <span id="best-le-value"></span> ปี</p>
     </div>
-    <p id="curr-age-text">อายุที่คาดเฉลี่ยของคุณคือ <span id="le-value"></span> ปี</p>
+    <p id="curr-age-text">อายุ <span id="le-value"></span> ปี</p>
+    <div id="legend">
+        <div id="legend-red">&#x25cf; อายุคาดเฉลี่ยของบุคคลที่ไม่มีปัจจัยเสี่ยง</div>
+        <div id="legend-blue">&#x25cf; อายุคาดเฉลี่ยของคุณ</div>
+    </div>
     <div class="row-button">
         <button class="start-button" type="button" onclick="document.location='index.html'">เริ่มทำแบบประเมินอีกครั้ง &#8634;</button>
     </div> 
     <div class="footer">
         <div class="footer-1">
             <div class="text-footer">
-                <p class="ft-1">Content by<br>แผนงานพัฒนาดัชนีภาระโรคแห่งประเทศไทย</p>
+                <p class="ft-1">Content by<br>โครงการเสริมสร้างศักยภาพการศึกษาดัชนีภาระโรคแห่งประเทศไทย (BOD Thailand)</p>
             </div>
             <div class="text-footer">
                 <p class="ft-1">Supported by<br>สำนักงานคณะกรรมการส่งเสริมวิทยาศาสตร์ วิจัยและนวัตกรรม (สกสว.)</p>

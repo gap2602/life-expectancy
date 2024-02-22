@@ -19,11 +19,7 @@ function cal_le(act_value, alc_value, weight_value, height_value, fpg_value, ldl
 function cal_age_month(age_num) {
     const dec = age_num - Math.floor(age_num);
     const age_month = Math.floor(dec*12);
-    if (age_month < 1) {
-        return age_num.toFixed(0) + " ปี"
-    } else {
-        return age_num.toFixed(0) + " ปี " + age_month.toFixed(0) + " เดือน"
-    }
+    return [age_num.toFixed(0), age_month.toFixed(0)]
 }
 
 function cal_risk_age_month(age_num) {
@@ -85,22 +81,27 @@ if (storeALC <= 0) {
 
 if (bmi < 18.5) {
     document.getElementById('bmi-block').style.display ='block';
+    document.getElementById("risk-body").style.backgroundImage = "url('Http pic/1.png')";
     risk_factor.push('ควรรับประทานอาหารให้เพียงพอและออกกำลังกายเสริมสร้างกล้ามเนื้อเพื่อให้ค่าดัชนีมวลกาย (BMI) ให้อยู่ในระดับปกติ');
 } else if (bmi >= 18.5 && bmi < 23) {
     document.getElementById('bmi-block').style.display ='none';
+    document.getElementById("risk-body").style.backgroundImage = "url('Http pic/2.png')";
 } else if (bmi >= 23 && bmi < 25) {
     document.getElementById('bmi-block').style.display ='block';
+    document.getElementById("risk-body").style.backgroundImage = "url('Http pic/3.png')";
     risk_factor.push('ควรควบคุมน้ำหนักเพื่อให้ค่าดัชนีมวลกาย (BMI) อยู่ในระดับปกติ ');
-} else if (bmi >= 25 && storeSBP < 30) {
+} else if (bmi >= 25 && bmi < 30) {
     document.getElementById('bmi-block').style.display ='block';
+    document.getElementById("risk-body").style.backgroundImage = "url('Http pic/4.png')";
     risk_factor.push('ควรควบคุมน้ำหนัก เนื่องจากค่า BMI ในช่วงนี้มีความเสี่ยงต่อการเกิดโรคที่มากับความอ้วนได้');
 } else if (bmi >= 30) {
     document.getElementById('bmi-block').style.display ='block';
+    document.getElementById("risk-body").style.backgroundImage = "url('Http pic/5.png')";
     risk_factor.push('ควรปรับพฤติกรรมการรับประทานอาหาร ออกกำลังกายอย่างสม่ำเสมอ');
 }
 
 if (storeACT < 600) {
-    document.getElementById("act-text").innerHTML = "ระดับน้อย (ไม่เพียงพอ)";
+    document.getElementById("act-text").innerHTML = "ระดับน้อย<br>(ไม่เพียงพอ)";
     document.getElementById('act-block').style.display ='block';
     risk_factor.push('ควรเพิ่มกิจกรรมทางกายให้มากขึ้น');
 } else if (storeACT >= 600 && storeACT < 1500) {
@@ -138,11 +139,11 @@ if (FPGmgdl < 100) {
     document.getElementById("fpg-text").innerHTML = "ปกติ";
     document.getElementById('fpg-block').style.display ='none';
 } else if (FPGmgdl >= 100 && FPGmgdl < 126) {
-    document.getElementById("fpg-text").innerHTML = "เสี่ยงเป็นโรคเบาหวานแฝง";
+    document.getElementById("fpg-text").innerHTML = "เสี่ยงเป็นโรค<br>เบาหวานแฝง";
     document.getElementById('fpg-block').style.display ='block';
     risk_factor.push('ควบคุมระดับน้ำตาลในเลือด และปรับพฤติกรรมการบริโภคน้ำตาล');
 } else if (FPGmgdl >= 126) {
-    document.getElementById("fpg-text").innerHTML = "เสี่ยงเป็นโรคเบาหวานสูง";
+    document.getElementById("fpg-text").innerHTML = "เสี่ยงเป็นโรค<br>เบาหวานสูง";
     document.getElementById('fpg-block').style.display ='block';
     risk_factor.push('ควบคุมระดับน้ำตาลในเลือด และปรับพฤติกรรมการบริโภคน้ำตาล');
 }
@@ -169,8 +170,10 @@ document.getElementById("alc-text").innerHTML = storeALC.toString() + " กร�
 document.getElementById("risk-rd").innerHTML = risk_factor.join(' ');
 
 const le_value = cal_le(storeACT, storeALC, storeWeight, storeHeight, storeFPG, storeLDL, storeSBP, storeSmokeStatus, 
-                        storeSmokeRoll, storeSmokeYos, storeSmokeYoq, storeGender, storeAge)
-document.getElementById("total-age").innerHTML = cal_age_month(parseFloat(storeAge) + le_value);
+                        storeSmokeRoll, storeSmokeYos, storeSmokeYoq, storeGender, storeAge);
+const [total_age_year, total_age_month] = cal_age_month(parseFloat(storeAge) + le_value);                      
+document.getElementById("total-age-year").innerHTML = total_age_year;
+document.getElementById("total-age-month").innerHTML = total_age_month;
 document.getElementById("up-age").innerHTML = le_value.toFixed(0);
 
 //compare each factor
@@ -216,7 +219,6 @@ const best_le_age = parseFloat(storeAge) + best_le_value;
 document.getElementById("best-le-value").innerHTML = (best_le_age).toFixed(0);
 document.getElementById("le-value").innerHTML = (le_age).toFixed(0);
 
-document.getElementById("last-le-age").innerHTML = (le_value).toFixed(0) + " ปี";
 document.getElementById("last-tt-age").innerHTML = (le_age).toFixed(0) + " ปี";
 const diff_age = (best_le_age).toFixed(0) - (le_age).toFixed(0);
 document.getElementById("last-diff-age").innerHTML = (diff_age).toFixed(0) + " ปี";
@@ -224,7 +226,6 @@ document.getElementById("last-diff-age").innerHTML = (diff_age).toFixed(0) + " �
 percent_age = le_age/best_le_age;
 const bar_width = document.getElementById("cp").offsetWidth;
 const bar_text_width = document.getElementById("curr-age-text").offsetWidth;
-console.log(bar_text_width)
 document.getElementById("best-age").style.setProperty("--best-age", (bar_width*(1-percent_age-0.13)).toFixed(2) + "px");
 document.getElementById("curr-age").style.setProperty("--le-age", (bar_width*percent_age).toFixed(2) + "px");
-document.getElementById("curr-age-text").style.setProperty("--margin-left-text", (bar_width/0.7*(0.15 + 0.7*percent_age)-150).toFixed(2) + "px");
+document.getElementById("curr-age-text").style.setProperty("--margin-left-text", (bar_width/0.7*(0.15 + 0.7*percent_age)-30).toFixed(2) + "px");

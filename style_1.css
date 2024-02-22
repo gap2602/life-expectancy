@@ -27,7 +27,7 @@ body,.start-button {
     display: flex;
     background:#71D4FF;
     width: 100%;
-    height: 150px;
+    height: 200px;
 }
 
 .text-header {
@@ -41,7 +41,7 @@ body,.start-button {
 
 .header {
     font-family: FCLamoon;
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: 500;
     color: white;
     text-shadow: 1px 1px gray;
@@ -66,7 +66,7 @@ body,.start-button {
 }
 
 .pic-header {
-    height: 80%;
+    height: 60%;
     align-items: center;
 }
 
@@ -80,10 +80,10 @@ body,.start-button {
 }
 
 .intro-text {
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 400;
     color: #2F6690;
-    width: 70%;
+    width: 90%;
     text-align: center;
     margin: 0 auto 20px auto;
 }
@@ -100,7 +100,7 @@ body,.start-button {
 
 #main-header {
     width: 80%;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 600;
     color: #067AD3;
     margin: 10px auto;
@@ -123,6 +123,8 @@ body,.start-button {
     align-items: center;
     color: #067AD3;
     aspect-ratio: 1;
+    margin: 0 auto;
+    max-height: 200px;
 }
 
 .pic-risk {
@@ -143,13 +145,13 @@ body,.start-button {
     font-weight: 600;
     color: #067AD3;
     margin-top: 0%;
+    word-wrap: break-word;
 }
 
 #row-2 {
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
     width: 100%;
-    aspect-ratio: 3;
     padding-top: 0%;
 }
 
@@ -199,19 +201,19 @@ body,.start-button {
     display: flex;
     background:#DEF5FF;
     width: 100%;
-    height: 200px;
+    height: 100px;
     margin-top: 20px;
 }
 
 .footer-1 {
     width: 40%;
-    height : 200px;
+    height : 100px;
     box-sizing: border-box;
 }
 
 .text-footer {
     width: 100%;
-    height : 100px;
+    height : 50px;
     box-sizing: border-box;
 }
 
@@ -220,7 +222,6 @@ body,.start-button {
     color: #2F6690;
     font-size: 0.4em;
     text-align: left;
-    padding-top: 5px;
     padding-left: 5px;
 }
 
@@ -237,7 +238,7 @@ body,.start-button {
 
 .logo-grid {
     display: flex;
-    max-height: 100px;
+    max-height: 50px;
     aspect-ratio: 1;
     align-items: center;
     justify-content: center;
@@ -245,7 +246,7 @@ body,.start-button {
 }
 
 .logo {
-    width: 80%;
+    width: 90%;
 }
 
 @media only screen and (max-width: 320px) {
@@ -255,8 +256,13 @@ body,.start-button {
     }
 
     .footer-1 {
-        width: 80%;
+        width: 65%;
     }
+
+    .footer-2 {
+        width: 35%;
+    }
+
 }
 
 @media only screen and (min-width: 320px) {
@@ -266,7 +272,11 @@ body,.start-button {
     }
 
     .footer-1 {
-        width: 30%;
+        width: fit-content;
+    }
+
+    .footer-2 {
+        width: 50%;
     }
 
     .ft-1 {
@@ -275,9 +285,19 @@ body,.start-button {
 }
 
 @media only screen and (min-width: 720px) {
-    #main-box {
+    #main-box, .intro-text {
         width: 80%;
     }
+
+    .intro-text {
+        font-size: 1.5em;
+        font-weight: 400;
+    }
+
+    #main-header {
+        font-size: 2em;
+    }
+
     .grid-names,.grid-names-2 {
         font-size: 1.3em;
         font-weight: 600;
@@ -288,27 +308,12 @@ body,.start-button {
         width: 30%;
     }
 
+    .footer-1 {
+        width: fit-content;
+    }
+
     .ft-1 {
         font-size: 0.7em;
-    }
-}
-
-@media only screen and (min-width: 1024px) {
-    #main-box {
-        width: 70%;
-    }
-    .grid-names,.grid-names-2 {
-        font-size: 1.5em;
-        font-weight: 600;
-    }
-
-    .start-button {
-        font-size: 1.5em;
-        width: 20%;
-    }
-
-    .ft-1 {
-        font-size: 1em;
     }
 
     .footer-2 {
@@ -317,6 +322,30 @@ body,.start-button {
     }
 
     .logo-grid {
-        max-height: 200px;
+        max-height: 100px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #main-box, .intro-text {
+        width: 70%;
+    }
+    .grid-names,.grid-names-2 {
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+
+    .pic-risk-2 {
+        width: 70%;
+    }
+    
+
+    .start-button {
+        font-size: 1.5em;
+        width: 20%;
+    }
+
+    .ft-1 {
+        font-size: 1em;
     }
 }
