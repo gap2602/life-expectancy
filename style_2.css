@@ -365,15 +365,11 @@ body,.start-button, .answer-number::placeholder {
     }
 
     .footer-1 {
-        width: fit-content;
+        width: 65%;
     }
 
     .footer-2 {
-        width: 50%;
-    }
-
-    .ft-1 {
-        font-size: 0.6em;
+        width: 35%;
     }
 
 }
@@ -385,11 +381,11 @@ body,.start-button, .answer-number::placeholder {
     }
 
     .footer-1 {
-        width: 50%;
+        width: 60%;
     }
 
     .footer-2 {
-        width: 50%;
+        width: 40%;
     }
 
     .ft-1 {
@@ -492,10 +488,6 @@ body,.start-button, .answer-number::placeholder {
         width: 30%;
     }
 
-    .footer-1 {
-        width: fit-content;
-    }
-
     .ft-1 {
         font-size: 0.7em;
     }
@@ -537,7 +529,12 @@ body,.start-button, .answer-number::placeholder {
         width: 20%;
     }
 
+    .footer-2{
+        flex: 1;
+        padding-left: 30px;
+    }
+
     .ft-1 {
-        font-size: 1em;
+        font-size: 0.8em;
     }
 }
