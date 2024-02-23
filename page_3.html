@@ -36,7 +36,7 @@
         <div id="range-warning">กรุณากรอกช่วงความดันระหว่าง 90 - 200 mmHg</div>
         <div class="input-block" id="input-block-sbp">
             <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="sbp-w"></i>
-            <input class="answer-number" type="number" placeholder="ระดับความดันโลหิต" id="sbp" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับความดันโลหิต'"> <div class="unit">mmHg (มิลลิเมตรปรอท)</div>
+            <input class="answer-number" type="number" placeholder="ระดับความดันโลหิต" id="sbp" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับความดันโลหิต'" min="0" oninput="validity.valid||(value='');"> <div class="unit">mmHg (มิลลิเมตรปรอท)</div>
         </div>
     </div>
     
@@ -46,12 +46,12 @@
         <div class="input-block"> 
             <div class="input-block-inner">
                 <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="fpg-w"></i>
-                <input class="answer-number" type="number" placeholder="ระดับน้ำตาลในเลือด" id="fpg-mg" oninput="fpgConverter(this.id,this.value)" onchange="fpgConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับน้ำตาลในเลือด'"> <div class="unit">mg/dl (มิลลิกรัมต่อเดซิลิตร)</div>
+                <input class="answer-number" type="number" placeholder="ระดับน้ำตาลในเลือด" id="fpg-mg" oninput="fpgConverter(this.id,this.value); validity.valid||(value='');" onchange="fpgConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับน้ำตาลในเลือด'"> <div class="unit">mg/dl (มิลลิกรัมต่อเดซิลิตร)</div>
             </div>
             <div class="conj">หรือ</div>
             <div class="input-block-inner">
                 <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="fpg-w-2"></i>
-                <input class="answer-number" type="number" placeholder="ระดับน้ำตาลในเลือด" id="fpg-mmol" oninput="fpgConverter(this.id,this.value)" onchange="fpgConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับน้ำตาลในเลือด'"> <div class="unit">mmol/L (มิลลิโมลต่อลิตร)</div>
+                <input class="answer-number" type="number" placeholder="ระดับน้ำตาลในเลือด" id="fpg-mmol" oninput="fpgConverter(this.id,this.value); validity.valid||(value='');" onchange="fpgConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับน้ำตาลในเลือด'"> <div class="unit">mmol/L (มิลลิโมลต่อลิตร)</div>
             </div>
         </div>   
     </div>
