@@ -166,7 +166,6 @@ if (storeSBP >= 159 || FPGmgdl >= 126 || LDLmgdl >= 160) {
     risk_factor.push('และพบแพทย์');
 }
 
-console.log(risk_factor)
 if (risk_factor.length == 1) {
     risk_factor = ["ผลการประเมินสุขภาพของคุณอยู่ในเกณฑ์ปกติดี หมั่นรักษาสุขภาพเพื่อให้มีอายุที่ยืนยาว"]
 }
