@@ -1,10 +1,67 @@
+@font-face {
+    font-family: FCLamoon;
+    src: url("FC Lamoon/FC Lamoon Regular ver 1.00.ttf");
+}
+
+@font-face {
+    font-family: FCLamoon-Bold;
+    src: url("FC Lamoon/FC Lamoon Bold ver 1.00.ttf");
+}
+
 h1,h2,h3,h4,p{
     margin: 0px;
 }
 
-body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, .answer-number-alc::placeholder, select{
+body,#next-button, .answer-number::placeholder, .answer-number-2::placeholder, .answer-number-alc::placeholder, select{
     font-family: 'IBM Plex Sans Thai';
     text-align: center;
+}
+
+#rectangle_2 {
+    display: flex;
+    background:#71D4FF;
+    width: 100%;
+    height: 100px;
+}
+
+.header-text-fr {
+    display: flex;
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: right;
+}
+
+#header {
+    font-family: FCLamoon;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: white;
+    text-shadow: 1px 1px gray;
+    text-align: right;
+}
+
+#subheader {
+    font-family: FCLamoon-Bold;
+    font-size: 1.8em;
+    font-weight: 400;
+    color: #067AD3;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    text-align: right;
+}
+
+#header-img-fr{
+    display: flex;
+    height: 100%;
+    justify-content: left;
+    align-items: center;
+}
+
+#header-img {
+    height: 60%;
+    align-items: center;
 }
 
 .header {
@@ -373,13 +430,13 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, 
     font-weight: 400;
 }
 
-.row-button {
+#button-block {
     display: flex;
     width: 100%;
     text-decoration: none;
 }
 
-.start-button {
+#next-button {
     font-weight: 500;
     font-size: 1em;
     background-color: #067AD3;
@@ -390,6 +447,7 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, 
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     cursor: pointer;
     width: 50%;
+    max-width: 200px;
     height: 60px;
     margin: 3% auto 3%;
     align-items: center;
@@ -448,7 +506,7 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, 
 }
 
 @media only screen and (max-width: 320px) {
-    .start-button {
+    #next-button {
         font-size: 1em;
         width: 50%;
     }
@@ -486,7 +544,7 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, 
         font-size: 1.2em;
     }
 
-    .start-button {
+    #next-button {
         font-size: 1em;
         width: 40%;
     }
@@ -614,7 +672,7 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, 
         font-size: 1em;
     }
 
-    .start-button {
+    #next-button {
         font-size: 1.3em;
         width: 30%;
     }
@@ -676,12 +734,9 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, 
     }
 
     .input-block{
-        justify-content: left;
-    }
-
-    .input-block{
         display: grid;
-        grid-template-columns: 5% 5% 40% 5% 45%;
+        justify-content: left;
+        grid-template-columns: 5% 5% 40% 30% 20%;
         align-items: center;
         justify-content: center;
     }
@@ -714,7 +769,7 @@ body,.start-button, .answer-number::placeholder, .answer-number-2::placeholder, 
         width: 70%;
     }
     
-    .start-button {
+    #next-button {
         font-size: 1.5em;
         width: 20%;
     }

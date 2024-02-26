@@ -10,6 +10,14 @@
     <script src="script_3.js"></script>
 </head>
 <body>
+    <div id="rectangle_2">
+        <div class="header-text-fr">
+            <h1 id="header">เราจะมี <span id="subheader">"อายุ"</span><br>ถึงเท่าไรกันนะ?</h1>
+        </div>
+        <div id="header-img-fr">
+            <img src="image_ref\family_2.png" id="header-img">   
+        </div>
+    </div>
     <div class ="header">
         <div class="arrow-frame">
             <div id="arrow-circle">
@@ -36,22 +44,22 @@
         <div id="range-warning">กรุณากรอกช่วงความดันระหว่าง 90 - 200 mmHg</div>
         <div class="input-block" id="input-block-sbp">
             <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="sbp-w"></i>
-            <input class="answer-number" type="number" placeholder="ระดับความดันโลหิต" id="sbp" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับความดันโลหิต'" min="0" oninput="validity.valid||(value='');"> <div class="unit">mmHg (มิลลิเมตรปรอท)</div>
+            <input class="answer-number" type="number" placeholder="ระดับความดันโลหิต" id="sbp" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับความดันโลหิต'" onkeypress="return isPositiveNumber(event)" min="0"> <div class="unit">mmHg (มิลลิเมตรปรอท)</div>
         </div>
     </div>
     
     <div class="question-frame">
-        <div class="question">2. ระดับน้ำตาลในเลือด (FPG)</div>
+        <div class="question">2. ระดับน้ำตาลในเลือด (FPG/FBS)</div>
         <div class="question-warning-2">*กรุณาตรวจสอบ <span class="sub-warning-2">หน่วย</span> ให้ตรงก่อนกรอก</div>
         <div class="input-block"> 
             <div class="input-block-inner">
                 <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="fpg-w"></i>
-                <input class="answer-number" type="number" placeholder="ระดับน้ำตาลในเลือด" id="fpg-mg" oninput="fpgConverter(this.id,this.value); validity.valid||(value='');" onchange="fpgConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับน้ำตาลในเลือด'"> <div class="unit">mg/dl (มิลลิกรัมต่อเดซิลิตร)</div>
+                <input class="answer-number" type="number" placeholder="ระดับน้ำตาลในเลือด" id="fpg-mg" oninput="fpgConverter(this.id,this.value);" onchange="fpgConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับน้ำตาลในเลือด'" onkeypress="return isPositiveNumber(event)" min="0"> <div class="unit">mg/dl (มิลลิกรัมต่อเดซิลิตร)</div>
             </div>
             <div class="conj">หรือ</div>
             <div class="input-block-inner">
                 <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="fpg-w-2"></i>
-                <input class="answer-number" type="number" placeholder="ระดับน้ำตาลในเลือด" id="fpg-mmol" oninput="fpgConverter(this.id,this.value); validity.valid||(value='');" onchange="fpgConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับน้ำตาลในเลือด'"> <div class="unit">mmol/L (มิลลิโมลต่อลิตร)</div>
+                <input class="answer-number" type="number" placeholder="ระดับน้ำตาลในเลือด" id="fpg-mmol" oninput="fpgConverter(this.id,this.value);" onchange="fpgConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับน้ำตาลในเลือด'" onkeypress="return isPositiveNumber(event)" min="0"> <div class="unit">mmol/L (มิลลิโมลต่อลิตร)</div>
             </div>
         </div>   
     </div>
@@ -61,17 +69,17 @@
         <div class="input-block">
             <div class="input-block-inner"> 
                 <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="ldl-w"></i>
-                <input class="answer-number" type="number" placeholder="ระดับคอเลสเตอรอล" id="ldl-mg" oninput="ldlConverter(this.id,this.value)" onchange="ldlConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับคอเลสเตอรอล'"><div class="unit">mg/dl (มิลลิกรัมต่อเตซิลิตร)</div> 
+                <input class="answer-number" type="number" placeholder="ระดับคอเลสเตอรอล" id="ldl-mg" oninput="ldlConverter(this.id,this.value)" onchange="ldlConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับคอเลสเตอรอล'" onkeypress="return isPositiveNumber(event)" min="0"><div class="unit">mg/dl (มิลลิกรัมต่อเตซิลิตร)</div> 
             </div>
             <div class="conj">หรือ</div>
             <div class="input-block-inner">
                 <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="ldl-w-2"></i>
-                <input class="answer-number" type="number" placeholder="ระดับคอเลสเตอรอล" id="ldl-mmol" oninput="ldlConverter(this.id,this.value)" onchange="ldlConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับคอเลสเตอรอล'"><div class="unit">mmol/L (มิลลิโมลต่อลิตร)</div> 
+                <input class="answer-number" type="number" placeholder="ระดับคอเลสเตอรอล" id="ldl-mmol" oninput="ldlConverter(this.id,this.value)" onchange="ldlConverter(this.id,this.value)" onfocus="this.placeholder=''" onblur="this.placeholder='ระดับคอเลสเตอรอล'" onkeypress="return isPositiveNumber(event)" min="0"><div class="unit">mmol/L (มิลลิโมลต่อลิตร)</div> 
             </div>
         </div> 
     </div>
-    <div class="row-button">
-        <button class="start-button" type="button" onclick="checkInput()">ถัดไป &#9658;</button>
+    <div id="button-block">
+        <button id="next-button" type="button" onclick="checkInput()">ถัดไป &#9658;</button>
     </div> 
     <div class="footer">
         <div class="footer-1">
@@ -83,11 +91,11 @@
             </div>
         </div>
         <div class="footer-2"> 
-            <div class="logo-grid"><img src="Logo\IHPP edit.png" class="logo"></div>
-            <div class="logo-grid"><img src="Logo\BOD_rm_bg.png" class="logo"></div>
-            <div class="logo-grid"><img src="Logo\logo MOPH.png" class="logo"></div>
-            <div class="logo-grid"><img src="Logo\TSRI_Logo-Original_08.png" class="logo"></div>
-            <div class="logo-grid"><img src="Logo\ThaiHealth.png" class="logo"></div> 
+            <div class="logo-grid"><img src="Logo\IHPP_logo.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\BOD_logo.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\MOPH_logo.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\TSRI_logo.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\ThaiHealth_logo.png" class="logo"></div> 
         </div>
     </div>
 </body>

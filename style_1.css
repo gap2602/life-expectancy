@@ -12,7 +12,7 @@ h1,h2,h3,h4,p{
     margin: 0px;
 }
 
-body,.start-button {
+body,#next-button {
     font-family: 'IBM Plex Sans Thai';
     text-align: center;
 }
@@ -30,7 +30,7 @@ body,.start-button {
     height: 200px;
 }
 
-.text-header {
+.header-text-fr {
     display: flex;
     box-sizing: border-box;
     width: 50%;
@@ -39,18 +39,18 @@ body,.start-button {
     justify-content: right;
 }
 
-.header {
+#header {
     font-family: FCLamoon;
-    font-size: 2.5em;
+    font-size: 2.3em;
     font-weight: 500;
     color: white;
     text-shadow: 1px 1px gray;
     text-align: right;
 }
 
-.subheader {
+#subheader {
     font-family: FCLamoon-Bold;
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 400;
     color: #067AD3;
     -webkit-text-stroke-width: 1.5px;
@@ -58,19 +58,19 @@ body,.start-button {
     text-align: right;
 }
 
-.pic-header-frame{
+#header-img-fr{
     display: flex;
     height: 100%;
     justify-content: left;
     align-items: center;
 }
 
-.pic-header {
+#header-img {
     height: 60%;
     align-items: center;
 }
 
-.intro-topic {
+#intro-topic {
     font-size: 2em;
     font-weight: 600;
     color: #067AD3;
@@ -79,7 +79,7 @@ body,.start-button {
     margin-bottom: 20px;
 }
 
-.intro-text {
+#intro-text {
     font-size: 1em;
     font-weight: 400;
     color: #2F6690;
@@ -175,13 +175,22 @@ body,.start-button {
     margin-top: 0%;
 }
 
-.row-button {
+#remark {
+    width: 90%;
+    margin: 5px auto;
+    font-size: 0.8em;
+    font-weight: 400;
+    color: #6D6D6D;
+    text-align: left;
+}
+
+#button-block {
     display: flex;
     width: 100%;
     text-decoration: none;
 }
 
-.start-button {
+#next-button {
     font-weight: 500;
     font-size: 1em;
     background-color: #067AD3;
@@ -192,6 +201,7 @@ body,.start-button {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     cursor: pointer;
     width: 50%;
+    max-width: 200px;
     height: 60px;
     margin: 3% auto 3%;
     align-items: center;
@@ -205,13 +215,13 @@ body,.start-button {
     margin-top: 20px;
 }
 
-.footer-1 {
+#footer-text-fr {
     width: 40%;
     height : 100px;
     box-sizing: border-box;
 }
 
-.text-footer {
+.footer-text {
     width: 100%;
     height : 50px;
     box-sizing: border-box;
@@ -225,7 +235,7 @@ body,.start-button {
     padding-left: 5px;
 }
 
-.footer-2 {
+#footer-img-fr {
     display: grid;
     grid-template-columns: 30% 30% 30% ;
     box-sizing: border-box;
@@ -250,32 +260,32 @@ body,.start-button {
 }
 
 @media only screen and (max-width: 320px) {
-    .start-button {
+    #next-button {
         font-size: 1em;
         width: 50%;
     }
 
-    .footer-1 {
+    #footer-text-fr {
         width: 65%;
     }
 
-    .footer-2 {
+    #footer-img-fr {
         width: 35%;
     }
 
 }
 
 @media only screen and (min-width: 320px) {
-    .start-button {
+    #next-button {
         font-size: 1em;
         width: 40%;
     }
 
-    .footer-1 {
+    #footer-text-fr {
         width: 60%;
     }
 
-    .footer-2 {
+    #footer-img-fr {
         width: 40%;
     }
 
@@ -285,11 +295,11 @@ body,.start-button {
 }
 
 @media only screen and (min-width: 720px) {
-    #main-box, .intro-text {
+    #main-box, #intro-text, #remark {
         width: 80%;
     }
 
-    .intro-text {
+    #intro-text {
         font-size: 1.5em;
         font-weight: 400;
     }
@@ -303,7 +313,7 @@ body,.start-button {
         font-weight: 600;
     }
 
-    .start-button {
+    #next-button {
         font-size: 1.3em;
         width: 30%;
     }
@@ -312,7 +322,7 @@ body,.start-button {
         font-size: 0.7em;
     }
 
-    .footer-2 {
+    #footer-img-fr {
         display: grid;
         grid-template-columns: 20% 20% 20% 20% 20%;
     }
@@ -323,7 +333,7 @@ body,.start-button {
 }
 
 @media only screen and (min-width: 1024px) {
-    #main-box, .intro-text {
+    #main-box, #intro-text, #remark{
         width: 65%;
     }
     .grid-names,.grid-names-2 {
@@ -336,12 +346,12 @@ body,.start-button {
     }
     
 
-    .start-button {
+    #next-button {
         font-size: 1.5em;
         width: 20%;
     }
 
-    .footer-2{
+    #footer-img-fr{
         flex: 1;
         padding-left: 30px;
     }

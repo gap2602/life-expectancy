@@ -9,38 +9,38 @@ function cal_bmi() {
     }
     let imageshown, meaning, meaning_detail, color_style;
     if (bmi >= 15 && bmi < 18.5) {
-        imageshown = "Http pic/1.png";
+        imageshown = "image_ref/1_resize.png";
         meaning = "น้ำหนักต่ำกว่าเกณฑ์/ผอม";
         meaning_detail = "น้ำหนักน้อยกว่าปกตินั้นไม่ดี อาจเสี่ยงต่อการได้รับสารอาหารไม่เพียงพอ ส่งผลให้ร่างกายอ่อนเพลียง่าย การรับประทานอาหารให้เพียงพอและออกกำลังกายแบบเวทเทรนนิ่งเพื่อเสริมสร้างกล้ามเนื้อ สามารถช่วยเพิ่มค่า BMI ให้อยู่ในเกณฑ์ปกติได้";
         color_style = 'color:#FF0000';
     } else if (bmi >= 18.5 && bmi < 23) {
-        imageshown = "Http pic/2.png";
+        imageshown = "image_ref/2_resize.png";
         meaning = "น้ำหนักปกติ"
-        meaning_detail = "น้ำหนักที่เหมาะสมสำหรับคนไทยคือค่า BMI ระหว่าง 18.5-22.9 จัดอยู่ในเกณฑ์ปกติ ห่างไกลโรคที่เกิดจากความอ้วน และมีความเสี่ยงต่อการเกิดโรคต่าง ๆ น้อยที่สุด ควรพยายามรักษาระดับค่า BMI ให้อยู่ในระดับนี้ให้นานที่สุด";
+        meaning_detail = "น้ำหนักที่เหมาะสมสำหรับคนไทยคือค่า BMI ระหว่าง 18.5-22.9 จัดอยู่ในเกณฑ์ปกติ ห่างไกลโรคที่เกิดจากความอ้วน และมีความเสี่ยงต่อการเกิดโรคต่างๆ น้อยที่สุด ควรพยายามรักษาระดับค่า BMI ให้อยู่ในระดับนี้ให้นานที่สุด";
         color_style = 'color:#067AD3';
     } else if (bmi >= 23 && bmi < 25) {
-        imageshown = "Http pic/3.png";
+        imageshown = "image_ref/3_resize.png";
         meaning = "น้ำหนักเกิน"
-        meaning_detail = "พยายามอีกนิดเพื่อลดน้ำหนักให้เข้าสู่ค่ามาตรฐาน เพราะค่า BMI ในช่วงนี ยังถือว่าเป็นกลุ่มผู้ที่มีความอ้วนอยู่บ้าง แม้จะไม่ถือว่าอ้วน แต่หากประวัติคนในครอบครัวเคยเป็นโรคเบาหวานและความดันโลหิตสูง ก็ถือว่ายังมีความเสี่ยงมากกว่าคนปกติ";
+        meaning_detail = "พยายามอีกนิดเพื่อลดน้ำหนักให้เข้าสู่ค่ามาตรฐาน เพราะค่า BMI ในช่วงนี้ ยังถือว่าเป็นกลุ่มผู้ที่มีความอ้วนอยู่บ้าง แม้จะไม่ถือว่าอ้วน แต่หากประวัติคนในครอบครัวเคยเป็นโรคเบาหวานและความดันโลหิตสูง ก็ถือว่ายังมีความเสี่ยงมากกว่าคนปกติ";
         color_style = 'color:#FF0000';
     } else if (bmi >= 25 && bmi < 30) {
-        imageshown = "Http pic/4.png";
+        imageshown = "image_ref/4_resize.png";
         meaning = "อ้วนระดับ 1"
-        meaning_detail = "คุณอ้วนในระดับหนึ่ง ถึงแม้จะไม่ถึงเกณฑ์ที่ถือว่าอ้วนมาก ๆ แต่ก็ยังมีความเสี่ยงต่อการเกิดโรคที่มากับความอ้วนได้เช่นกัน ทั้งโรคเบาหวาน และความดันโลหิตสูง";
+        meaning_detail = "คุณอ้วนในระดับหนึ่ง ถึงแม้จะไม่ถึงเกณฑ์ที่ถือว่าอ้วนมากๆ แต่ก็ยังมีความเสี่ยงต่อการเกิดโรคที่มากับความอ้วนได้เช่นกัน ทั้งโรคเบาหวาน และความดันโลหิตสูง";
         color_style = 'color:#FF0000';
     } else if (bmi >= 30 && bmi < 50) {
-        imageshown = "Http pic/5.png";
+        imageshown = "image_ref/5_resize.png";
         meaning = "อ้วนระดับ 2"
-        meaning_detail = "ค่อนข้างอันตราย เพราะเข้าเกณฑ์อ้วนมาก เสี่ยงต่อการเกิดโรคร้ายแรงที่แฝงมากับความอ้วน หากค่า BMI อยู่ในระดับนี จะต้องระวังการรับประทานไขมัน และควรออกกำลังกายอย่างสม่ำเสมอ และหากเลขยิ่งสูงกว่า 40.0 ยิ่งแสดงถึงความอ้วนที่มากขึ้น";
+        meaning_detail = "ค่อนข้างอันตราย เพราะเข้าเกณฑ์อ้วนมาก เสี่ยงต่อการเกิดโรคร้ายแรงที่แฝงมากับความอ้วน หากค่า BMI อยู่ในระดับนี้ จะต้องระวังการรับประทานไขมัน และควรออกกำลังกายอย่างสม่ำเสมอ และหากค่า BMI สูงกว่า 40.0 ยิ่งแสดงถึงความอ้วนที่มากขึ้น";
         color_style = 'color:#FF0000';
     } else {
-        imageshown = "Http pic/2-removebg-preview.png";
+        imageshown = "image_ref/BMI.png";
         meaning = "ต่ำกว่า/เกินกว่าเกณฑ์มาก";
-        meaning_detail = "กรุณาตรวจสอบข้อมูลน้ำหนักส่วนสูงให้ถูกต้อง หากถูกต้องแล้วถ้า BMI < 15 ถือว่าผอมมากๆ เสี่ยงต่อการรับสารอาหารไม่เพียงพอ ถ้า BMI > 50 ถือว่าอ้วนมากๆ เสี่ยงเสี่ยงต่อปัญหาสุขภาพมากมาย";
+        meaning_detail = "กรุณาตรวจสอบข้อมูลน้ำหนักส่วนสูงให้ถูกต้อง หากถูกต้องแล้วถ้า BMI < 15 ถือว่าผอมมากๆ เสี่ยงต่อการรับสารอาหารไม่เพียงพอ ถ้า BMI > 50 ถือว่าอ้วนมากๆ เสี่ยงต่อปัญหาสุขภาพมากมาย";
         color_style = 'color:#FF0000';
     }
     
-    document.getElementById('img').src = imageshown;
+    document.getElementById('meaning-img').src = imageshown;
     document.getElementById("result-bmi-text").innerHTML = meaning;
     document.getElementById("result-bmi").innerHTML = result_bmi;
     document.getElementById("result-bmi-meaning").innerHTML = meaning_detail;
@@ -99,4 +99,16 @@ function checkInput() {
         window.location.href = "page_3.html";
     }
 
+}
+
+function isPositiveNumber(event) {
+    const charCode = event.which || event.keyCode;
+    if (charCode < 48 || charCode > 57 || (charCode === 48 && value.length > 0)) {
+        if (charCode != 46) {
+            return false
+        } else { 
+      return true;
+        }
+    }
+    return true;
 }

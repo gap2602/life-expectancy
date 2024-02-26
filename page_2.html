@@ -10,6 +10,14 @@
     <script src="script_2.js"></script>
 </head>
 <body>
+    <div id="rectangle_2">
+        <div class="header-text-fr">
+            <h1 id="header">เราจะมี <span id="subheader">"อายุ"</span><br>ถึงเท่าไรกันนะ?</h1>
+        </div>
+        <div id="header-img-fr">
+            <img src="image_ref\family_2.png" id="header-img">   
+        </div>
+    </div>
     <div class ="header">
         <div class="arrow-frame">
             <div id="arrow-circle">
@@ -43,20 +51,20 @@
             <h1 class="question">อายุ</h1>
             <div class="answer">
                 <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="age-w"></i>
-                <input class="answer-number" type="number" placeholder="อายุของคุณ" id="age" onfocus="this.placeholder=''" onblur="this.placeholder='อายุของคุณ'" oninput="validity.valid||(value='');"/> ปี
+                <input class="answer-number" type="number" placeholder="อายุของคุณ" id="age" onfocus="this.placeholder=''" onblur="this.placeholder='อายุของคุณ'" min="0" oninput="validity.valid||(value='');"/> ปี
             </div>
             <h1 class="question">ส่วนสูง</h1>
             <div class="answer">
                 <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="height-w"></i>
-                <input class="answer-number" type="number" placeholder="ส่วนสูงของคุณ" id="height" onchange="cal_bmi()" onfocus="this.placeholder=''" onblur="this.placeholder='ส่วนสูงของคุณ'" min="0" oninput="validity.valid||(value='');"/> เซนติเมตร
+                <input class="answer-number" type="number" placeholder="ส่วนสูงของคุณ" id="height" onchange="cal_bmi()" onfocus="this.placeholder=''" onblur="this.placeholder='ส่วนสูงของคุณ'" min="0" onkeypress="return isPositiveNumber(event)"/> เซนติเมตร
             </div>
             <h1 class="question">น้ำหนัก</h1>
             <div class="answer">
                 <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="weight-w"></i>
-                <input class="answer-number" type="number" placeholder="น้ำหนักของคุณ" id="weight" onchange="cal_bmi()" onfocus="this.placeholder=''" onblur="this.placeholder='น้ำหนักของคุณ'" min="0" oninput="validity.valid||(value='');"/> กิโลกรัม
+                <input class="answer-number" type="number" placeholder="น้ำหนักของคุณ" id="weight" onchange="cal_bmi()" onfocus="this.placeholder=''" onblur="this.placeholder='น้ำหนักของคุณ'" min="0" onkeypress="return isPositiveNumber(event)"/> กิโลกรัม
             </div>
             <h1 class="question"></h1>
-            <div id="range-warning">กรุณากรอกช่วงอายุระหว่าง 25 - 100 ปี</div>
+            <div id="range-warning">กรอกช่วงอายุระหว่าง 25 - 100 ปี</div>
         </div>
         <div class="result-side">
             <div class="result-topic">ค่า BMI ของคุณคือ :</div>
@@ -64,8 +72,8 @@
             <div class="result-topic">ผล BMI ของคุณคือ :</div>
             <div class ="result-text" id="result-bmi-text">ปกติ</div>
             <div class ="meaning-frame">
-                <div class="meaning-pic">
-                    <img id='img' src= imageshown onerror="this.onerror=null;this.src='Http pic/2-removebg-preview.png';">
+                <div class="meaning-img-fr">
+                    <img id='meaning-img' src= imageshown onerror="this.onerror=null;this.src='image_ref/BMI.png';">
                 </div>
                 <div class="meaning-text-frame">
                     <div class="result-topic">ความหมาย</div>
@@ -74,8 +82,8 @@
             </div>
         </div>
     </div>
-    <div class="row-button">
-        <button class="start-button" type="button" onclick="checkInput()">ถัดไป &#9658;</button>
+    <div id="button-block">
+        <button id="next-button" type="button" onclick="checkInput()">ถัดไป &#9658;</button>
     </div> 
     <div class="footer">
         <div class="footer-1">
@@ -87,11 +95,11 @@
             </div>
         </div>
         <div class="footer-2"> 
-            <div class="logo-grid"><img src="Logo\IHPP edit.png" class="logo"></div>
-            <div class="logo-grid"><img src="Logo\BOD_rm_bg.png" class="logo"></div>
-            <div class="logo-grid"><img src="Logo\logo MOPH.png" class="logo"></div>
-            <div class="logo-grid"><img src="Logo\TSRI_Logo-Original_08.png" class="logo"></div>
-            <div class="logo-grid"><img src="Logo\ThaiHealth.png" class="logo"></div> 
+            <div class="logo-grid"><img src="Logo\IHPP_logo.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\BOD_logo.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\MOPH_logo.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\TSRI_logo.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\ThaiHealth_logo.png" class="logo"></div> 
         </div>
     </div>
 </body>

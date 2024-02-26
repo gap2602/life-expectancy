@@ -8,18 +8,18 @@
     <meta charset="UTF-8">
 </head>
 <body>
-    <div class ="box_header" id="rectangle_1"></div>
-    <div class ="box_header" id="rectangle_2">
-        <div class="text-header">
-            <h1 class="header">เราจะมี <span class="subheader">"อายุ"</span><br>ถึงเท่าไรกันนะ?</h1>
+    <div id="rectangle_1"></div>
+    <div id="rectangle_2">
+        <div class="header-text-fr">
+            <h1 id="header">เราจะมี <span id="subheader">"อายุ"</span><br>ถึงเท่าไรกันนะ?</h1>
         </div>
-        <div class="pic-header-frame">
-            <img src="Http pic\family_2.png" class="pic-header">   
+        <div id="header-img-fr">
+            <img src="image_ref\family_2.png" id="header-img">   
         </div>
     </div>
     <div>
-        <p class="intro-topic">Life Expectancy Calculator</p>
-        <p class="intro-text">  เคยสงสัยไหมว่า... เราจะเหลือเวลาในชีวิตอีกกี่ปี และมีอายุถึงเท่าไร
+        <p id="intro-topic">Life Expectancy Calculator</p>
+        <p id="intro-text">  เคยสงสัยไหมว่า... เราจะเหลือเวลาในชีวิตอีกกี่ปี และมีอายุถึงเท่าไร
                                 การที่เราจะมีอายุที่ยืนยาวได้นั้น ก็เป็นผลมาจากการมีพฤติกรรมสุขภาพที่ดี
                                 ซึ่งเครื่องมือนี้จะช่วยคาดการณ์ว่า คุณจะมีอายุถึงกี่ปี
                                 โดยประเมินผ่านปัจจัยทางด้านสุขภาพ มาลองทำกันดูนะ
@@ -29,16 +29,16 @@
         <h1 id="main-header">ปัจจัยที่ผลต่อการประเมินอายุ</h1>
         <div id = "row-1">
             <div class="grid-pics">
-                <img src="Http pic\belly.png" class="pic-risk">
+                <img src="image_ref\belly.png" class="pic-risk">
             </div>
             <div class="grid-pics">
-                <img src="Http pic\hypertension.png" class="pic-risk">
+                <img src="image_ref\hypertension.png" class="pic-risk">
             </div>
             <div class="grid-pics">
-                <img src="Http pic\blood-test.png" class="pic-risk">
+                <img src="image_ref\blood-test.png" class="pic-risk">
             </div>
             <div class="grid-pics">
-                <img src="Http pic\cholesterol.png" class="pic-risk">
+                <img src="image_ref\cholesterol.png" class="pic-risk">
             </div>
             <h2 class="grid-names" id="bmi">ดัชนีมวลกาย<br>(BMI)</h2>
             <h2 class="grid-names" id="sbp">ระดับ<br>ความดันโลหิต</h2>
@@ -48,37 +48,38 @@
         
         <div id = "row-2">
             <div class="grid-pics">
-                <img src="Http pic\jogging.png" class="pic-risk-2">
+                <img src="image_ref\jogging.png" class="pic-risk-2">
             </div>
             <div class="grid-pics">
-                <img src="Http pic\ashtray.png" class="pic-risk-2">
+                <img src="image_ref\ashtray.png" class="pic-risk-2">
             </div>
             <div class="grid-pics">
-                <img src="Http pic\liquor.png" class="pic-risk-2">
+                <img src="image_ref\liquor.png" class="pic-risk-2">
             </div>
             <h2 class="grid-names-2" id="act">กิจกรรมทางกาย</h2>
             <h2 class="grid-names-2" id="smk">การสูบบุหรี่</h2>
             <h2 class="grid-names-2" id="alc">การดื่มแอลกอฮอล์</h2>
         </div>
     </div>
-    <div class="row-button">
-        <button class="start-button" type="button" onclick="document.location='page_2.html'">เริ่มทำได้เลย &#9658;</button>
+    <div id="remark">หมายเหตุ: แบบประเมินบางส่วนจำเป็นต้องใช้ข้อมูลจากผลการตรวจสุขภาพ</div>
+    <div id="button-block">
+        <button id="next-button" type="button" onclick="document.location='page_2.html'">เริ่มทำได้เลย &#9658;</button>
     </div> 
     <div class="footer">
-        <div class="footer-1">
-            <div class="text-footer">
+        <div id="footer-text-fr">
+            <div class="footer-text">
                 <p class="ft-1">Content by<br>โครงการเสริมสร้างศักยภาพการศึกษาดัชนีภาระโรคแห่งประเทศไทย (BOD Thailand)</p>
             </div>
-            <div class="text-footer">
+            <div class="footer-text">
                 <p class="ft-1">Supported by<br>สำนักงานคณะกรรมการส่งเสริมวิทยาศาสตร์ วิจัยและนวัตกรรม (สกสว.)</p>
             </div>
         </div>
-        <div class="footer-2"> 
-            <div class="logo-grid"><img src="Logo\IHPP edit.png" class="logo"></div>
-            <div class="logo-grid"><img src="Logo\BOD_rm_bg.png" class="logo"></div>
-            <div class="logo-grid"><img src="Logo\logo MOPH.png" class="logo"></div>
-            <div class="logo-grid"><img src="Logo\TSRI_Logo-Original_08.png" class="logo"></div>
-            <div class="logo-grid"><img src="Logo\ThaiHealth.png" class="logo"></div> 
+        <div id="footer-img-fr"> 
+            <div class="logo-grid"><img src="Logo\IHPP_logo.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\BOD_logo.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\MOPH_logo.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\TSRI_logo.png" class="logo"></div>
+            <div class="logo-grid"><img src="Logo\ThaiHealth_logo.png" class="logo"></div> 
         </div>
     </div>
 </body>

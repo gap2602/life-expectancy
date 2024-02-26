@@ -49,8 +49,10 @@ const storeALC = sessionStorage.getItem('alc-amt');
 
 if (storeGender == "male") {
     document.getElementById("gender").innerHTML = "เพศชาย";
+    document.getElementById("best-le-gender").innerHTML = "เพศชาย";
 } else if (storeGender == "female") {
     document.getElementById("gender").innerHTML = "เพศหญิง";
+    document.getElementById("best-le-gender").innerHTML = "เพศหญิง";
 }
 const bmi = storeWeight/(storeHeight * storeHeight / 10000);
 document.getElementById("bmi").innerHTML = "ค่า BMI : " + (bmi).toFixed(2) + " - " + storeBMIMeaning;
@@ -81,33 +83,33 @@ if (storeALC <= 0) {
 
 if (bmi < 18.5) {
     document.getElementById('bmi-block').style.display ='block';
-    document.getElementById("risk-body").style.backgroundImage = "url('Http pic/1.png')";
-    risk_factor.push('ควรรับประทานอาหารให้เพียงพอและออกกำลังกายเสริมสร้างกล้ามเนื้อเพื่อให้ค่าดัชนีมวลกาย (BMI) ให้อยู่ในระดับปกติ');
+    document.getElementById("risk-body").style.backgroundImage = "url('image_ref/1_resize.png')";
+    risk_factor.push('รับประทานอาหารให้เพียงพอและออกกำลังกายเสริมสร้างกล้ามเนื้อเพื่อให้ค่าดัชนีมวลกาย (BMI) ให้อยู่ในระดับปกติ');
 } else if (bmi >= 18.5 && bmi < 23) {
     document.getElementById('bmi-block').style.display ='none';
-    document.getElementById("risk-body").style.backgroundImage = "url('Http pic/2.png')";
+    document.getElementById("risk-body").style.backgroundImage = "url('image_ref/2_resize.png')";
 } else if (bmi >= 23 && bmi < 25) {
     document.getElementById('bmi-block').style.display ='block';
-    document.getElementById("risk-body").style.backgroundImage = "url('Http pic/3.png')";
-    risk_factor.push('ควรควบคุมน้ำหนักเพื่อให้ค่าดัชนีมวลกาย (BMI) อยู่ในระดับปกติ ');
+    document.getElementById("risk-body").style.backgroundImage = "url('image_ref/3_resize.png')";
+    risk_factor.push('ควบคุมน้ำหนักเพื่อให้ค่าดัชนีมวลกาย (BMI) อยู่ในระดับปกติ ');
 } else if (bmi >= 25 && bmi < 30) {
     document.getElementById('bmi-block').style.display ='block';
-    document.getElementById("risk-body").style.backgroundImage = "url('Http pic/4.png')";
-    risk_factor.push('ควรควบคุมน้ำหนัก เนื่องจากค่า BMI ในช่วงนี้มีความเสี่ยงต่อการเกิดโรคที่มากับความอ้วนได้');
+    document.getElementById("risk-body").style.backgroundImage = "url('image_ref/4_resize.png')";
+    risk_factor.push('ควบคุมน้ำหนัก เนื่องจากค่า BMI ในช่วงนี้มีความเสี่ยงต่อการเกิดโรคที่มากับความอ้วนได้');
 } else if (bmi >= 30) {
     document.getElementById('bmi-block').style.display ='block';
-    document.getElementById("risk-body").style.backgroundImage = "url('Http pic/5.png')";
-    risk_factor.push('ควรปรับพฤติกรรมการรับประทานอาหาร ออกกำลังกายอย่างสม่ำเสมอ');
+    document.getElementById("risk-body").style.backgroundImage = "url('image_ref/5_resize.png')";
+    risk_factor.push('ปรับพฤติกรรมการรับประทานอาหาร ออกกำลังกายอย่างสม่ำเสมอ');
 }
 
 if (storeACT < 600) {
     document.getElementById("act-text").innerHTML = "ระดับน้อย<br>(ไม่เพียงพอ)";
     document.getElementById('act-block').style.display ='block';
-    risk_factor.push('ควรเพิ่มกิจกรรมทางกายให้มากขึ้น');
+    risk_factor.push('เพิ่มกิจกรรมทางกายให้มากขึ้น');
 } else if (storeACT >= 600 && storeACT < 1500) {
     document.getElementById("act-text").innerHTML = "ระดับปานกลาง";
     document.getElementById('act-block').style.display ='block';
-    risk_factor.push('ควรเพิ่มระยะเวลาของกิจกรรมทางกายในส่วนความแข็งแรงและความยืดหยุ่นของกล้ามเนื้อ');
+    risk_factor.push('เพิ่มระยะเวลาของกิจกรรมทางกายในส่วนความแข็งแรงและความยืดหยุ่นของกล้ามเนื้อ');
 } else if (storeACT >= 1500 ) {
     document.getElementById("act-text").innerHTML = "ระดับมาก";
     document.getElementById('act-block').style.display ='none';
@@ -168,6 +170,7 @@ if (storeSBP >= 159 || FPGmgdl >= 126 || LDLmgdl >= 160) {
 
 if (risk_factor.length == 1) {
     risk_factor = ["ผลการประเมินสุขภาพของคุณอยู่ในเกณฑ์ปกติดี หมั่นรักษาสุขภาพเพื่อให้มีอายุที่ยืนยาว"]
+    document.getElementById("sg-topic-1").style.display = 'none';
 }
 
 document.getElementById("alc-text").innerHTML = storeALC.toString() + " กรัมต่อวัน";
@@ -220,16 +223,20 @@ document.getElementById("smk-up-age").innerHTML = cal_risk_age_month((le_smk_val
 const best_le_value = cal_le(4200, 0, 21, 100, 4.9, 1.3, 115, "never", 0, 0, 0, storeGender, storeAge);
 const le_age = parseFloat(storeAge) + le_value;
 const best_le_age = parseFloat(storeAge) + best_le_value;
-document.getElementById("best-le-value").innerHTML = (best_le_age).toFixed(0);
+document.getElementById("best-le-value").innerHTML = (best_le_age).toFixed(0) + " ปี";
 document.getElementById("le-value").innerHTML = (le_age).toFixed(0);
 
 document.getElementById("last-tt-age").innerHTML = (le_age).toFixed(0) + " ปี";
 const diff_age = (best_le_age).toFixed(0) - (le_age).toFixed(0);
-document.getElementById("last-diff-age").innerHTML = (diff_age).toFixed(0) + " ปี";
+if (diff_age.toFixed(0) == "0") {
+    document.getElementById("last-diff-age").innerHTML = "ผลการวิจัยคาดการณ์ว่าคุณมีอายุคาดเฉลี่ยเท่ากับผู้ที่ไม่มีปัจจัยเสี่ยงทางด้านสุขภาพ";
+} else {
+    document.getElementById("last-diff-age").innerHTML = "ผลการวิจัยคาดการณ์ว่าคุณจะมีอายุเพิ่มขึ้นได้อีก " + (diff_age).toFixed(0) + " ปี";
+}
 
 percent_age = le_age/best_le_age;
 const bar_width = document.getElementById("cp").offsetWidth;
 const bar_text_width = document.getElementById("curr-age-text").offsetWidth;
 document.getElementById("best-age").style.setProperty("--best-age", (bar_width*(1-percent_age-0.13)).toFixed(2) + "px");
 document.getElementById("curr-age").style.setProperty("--le-age", (bar_width*percent_age).toFixed(2) + "px");
-document.getElementById("curr-age-text").style.setProperty("--margin-left-text", (bar_width/0.7*(0.15 + 0.7*percent_age)-30).toFixed(2) + "px");
+document.getElementById("curr-age-text").style.setProperty("--margin-left-text", (bar_width/0.7*(0.15 + 0.7*percent_age)-100).toFixed(2) + "px");

@@ -69,3 +69,15 @@ function checkInput() {
       window.location.href = "page_4.html";
   }
 }
+
+function isPositiveNumber(event) {
+  const charCode = event.which || event.keyCode;
+  if (charCode < 48 || charCode > 57 || (charCode === 48 && value.length > 0)) {
+      if (charCode != 46) {
+          return false
+      } else { 
+    return true;
+      }
+  }
+  return true;
+}
