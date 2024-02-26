@@ -236,7 +236,8 @@ if (diff_age.toFixed(0) == "0") {
 
 percent_age = le_age/best_le_age;
 const bar_width = document.getElementById("cp").offsetWidth;
+const curr_age_width = document.getElementById("curr-age-text").offsetWidth;
 const bar_text_width = document.getElementById("curr-age-text").offsetWidth;
 document.getElementById("best-age").style.setProperty("--best-age", (bar_width*(1-percent_age-0.13)).toFixed(2) + "px");
 document.getElementById("curr-age").style.setProperty("--le-age", (bar_width*percent_age).toFixed(2) + "px");
-document.getElementById("curr-age-text").style.setProperty("--margin-left-text", (bar_width/0.7*(0.15 + 0.7*percent_age)-100).toFixed(2) + "px");
+document.getElementById("curr-age-text").style.setProperty("--margin-left-text", (bar_width/0.7*(0.15 + 0.7*percent_age)-(curr_age_width/2)).toFixed(2) + "px");
