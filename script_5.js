@@ -83,22 +83,22 @@ if (storeALC <= 0) {
 
 if (bmi < 18.5) {
     document.getElementById('bmi-block').style.display ='block';
-    document.getElementById("risk-body").style.backgroundImage = "url('image_ref/1_resize.png')";
+    document.getElementById("risk-body").style.backgroundImage = "url('image_ref/1.png')";
     risk_factor.push('รับประทานอาหารให้เพียงพอและออกกำลังกายเสริมสร้างกล้ามเนื้อเพื่อให้ค่าดัชนีมวลกาย (BMI) ให้อยู่ในระดับปกติ');
 } else if (bmi >= 18.5 && bmi < 23) {
     document.getElementById('bmi-block').style.display ='none';
-    document.getElementById("risk-body").style.backgroundImage = "url('image_ref/2_resize.png')";
+    document.getElementById("risk-body").style.backgroundImage = "url('image_ref/2.png')";
 } else if (bmi >= 23 && bmi < 25) {
     document.getElementById('bmi-block').style.display ='block';
-    document.getElementById("risk-body").style.backgroundImage = "url('image_ref/3_resize.png')";
+    document.getElementById("risk-body").style.backgroundImage = "url('image_ref/3.png')";
     risk_factor.push('ควบคุมน้ำหนักเพื่อให้ค่าดัชนีมวลกาย (BMI) อยู่ในระดับปกติ ');
 } else if (bmi >= 25 && bmi < 30) {
     document.getElementById('bmi-block').style.display ='block';
-    document.getElementById("risk-body").style.backgroundImage = "url('image_ref/4_resize.png')";
+    document.getElementById("risk-body").style.backgroundImage = "url('image_ref/4.png')";
     risk_factor.push('ควบคุมน้ำหนัก เนื่องจากค่า BMI ในช่วงนี้มีความเสี่ยงต่อการเกิดโรคที่มากับความอ้วนได้');
 } else if (bmi >= 30) {
     document.getElementById('bmi-block').style.display ='block';
-    document.getElementById("risk-body").style.backgroundImage = "url('image_ref/5_resize.png')";
+    document.getElementById("risk-body").style.backgroundImage = "url('image_ref/5.png')";
     risk_factor.push('ปรับพฤติกรรมการรับประทานอาหาร ออกกำลังกายอย่างสม่ำเสมอ');
 }
 

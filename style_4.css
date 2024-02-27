@@ -27,7 +27,7 @@ body,#next-button, .answer-number::placeholder, .answer-number-2::placeholder, .
 .header-text-fr {
     display: flex;
     box-sizing: border-box;
-    width: 50%;
+    width: 55%;
     height: 100%;
     align-items: center;
     justify-content: right;
@@ -369,7 +369,7 @@ body,#next-button, .answer-number::placeholder, .answer-number-2::placeholder, .
 }
 
 #choice-warning {
-    display: block;
+    display: none;
     width: 90%;
     margin: 0 auto;
     font-size: 0.8em;

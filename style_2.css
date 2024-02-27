@@ -27,7 +27,7 @@ body,#next-button, .answer-number::placeholder {
 .header-text-fr {
     display: flex;
     box-sizing: border-box;
-    width: 50%;
+    width: 55%;
     height: 100%;
     align-items: center;
     justify-content: right;
@@ -234,7 +234,7 @@ body,#next-button, .answer-number::placeholder {
 .answer-number {
     display: flex;
     box-sizing: border-box;
-    width: 70%;
+    width: 100px;
     height: 2em;
     font-size: 0.8em;
     font-weight: 400;
@@ -481,7 +481,7 @@ body,#next-button, .answer-number::placeholder {
     }
     
     .answer-number {
-        width: 70%;
+        width: 200px;
         margin-right: 10px;
         line-height: 2em;
         font-size: 1em;
@@ -561,6 +561,10 @@ body,#next-button, .answer-number::placeholder {
     .main-content {
         width: 70%;
         flex-direction: row;
+    }
+
+    .answer-number{
+        width: 150px;
     }
 
     .input-side, .result-side{
