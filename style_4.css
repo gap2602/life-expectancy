@@ -737,12 +737,8 @@ body,#next-button, .answer-number::placeholder, .answer-number-2::placeholder, .
         margin-left: 45px;
     }
 
-    .input-block{
-        display: grid;
-        justify-content: left;
-        grid-template-columns: 5% 5% 40% 30% 20%;
-        align-items: center;
-        justify-content: center;
+    .input-block {
+        margin-left: 20px;
     }
 
     .answer-number {
