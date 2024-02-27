@@ -26,7 +26,11 @@ function cal_risk_age_month(age_num) {
     const dec = age_num - Math.floor(age_num);
     const age_month = Math.floor(dec*12);
     if (age_num < 1) {
-        return " " + age_month.toFixed(0) + " เดือน"
+        if (age_month.toFixed(0) == "0") {
+            return " 1 เดือน"
+        } else {
+            return " " + age_month.toFixed(0) + " เดือน"
+        }
     } else {
         return " " + age_num.toFixed(1) + " ปี"
     }
@@ -229,9 +233,9 @@ document.getElementById("le-value").innerHTML = (le_age).toFixed(0);
 document.getElementById("last-tt-age").innerHTML = (le_age).toFixed(0) + " ปี";
 const diff_age = (best_le_age).toFixed(0) - (le_age).toFixed(0);
 if (diff_age.toFixed(0) == "0") {
-    document.getElementById("last-diff-age").innerHTML = "ผลการวิจัยคาดการณ์ว่าคุณมีอายุคาดเฉลี่ยเท่ากับผู้ที่ไม่มีปัจจัยเสี่ยงทางด้านสุขภาพ";
+    document.getElementById("last-diff-age").innerHTML = "ซึ่งคุณมีอายุคาดเฉลี่ยเท่ากับบุคคลที่ไม่มีปัจจัยเสี่ยงทางด้านสุขภาพ";
 } else {
-    document.getElementById("last-diff-age").innerHTML = "ผลการวิจัยคาดการณ์ว่าคุณจะมีอายุเพิ่มขึ้นได้อีก " + (diff_age).toFixed(0) + " ปี";
+    document.getElementById("last-diff-age").innerHTML = "แต่หากเปรียบเทียบกับบุคคลที่ไม่มีปัจจัยเสี่ยงทางด้านสุขภาพและมีการดูแลตัวเองอย่างสม่ำเสมอผลการวิจัยคาดการณ์ว่าคุณจะมีอายุเพิ่มขึ้นได้อีก " + (diff_age).toFixed(0) + " ปี";
 }
 
 percent_age = le_age/best_le_age;
