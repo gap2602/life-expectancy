@@ -60,7 +60,7 @@ document.getElementById("age").innerHTML = "อายุ : " + storeAge + " ป�
 document.getElementById("height").innerHTML = "ส่วนสูง : " + storeHeight + " เซนติเมตร";
 document.getElementById("weight").innerHTML = "น้ำหนัก : " + storeWeight + " กิโลกรัม";
 
-var risk_factor = ["หากต้องการมีสุขภาพได้ดีและอายุที่ยืนนานแนะนำให้"];
+var risk_factor = ["หากต้องการมีสุขภาพที่ดีและอายุที่ยืนนานแนะนำให้"];
 
 if (storeSmokeStatus == "never") {
     document.getElementById("smk-text").innerHTML = "ไม่สูบบุหรี่";
