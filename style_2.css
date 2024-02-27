@@ -108,6 +108,7 @@ body,#next-button, .answer-number::placeholder {
     margin: 3% auto;
     text-align: center;
     font-weight: 600;
+    color: #2F6690;
 }
 
 .step-topic{
@@ -152,8 +153,9 @@ body,#next-button, .answer-number::placeholder {
 
 .topic-list {
     font-size: 0.8em;
-    font-weight: 600;
+    font-weight: 500;
     box-sizing: border-box;
+    color: #6D6D6D;
 }
 
 #current {
