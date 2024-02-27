@@ -161,8 +161,8 @@ body,#next-button, .answer-number::placeholder, .answer-number-2::placeholder, .
 
 #current {
     border: solid #06D340;
-    color: inherit;
-    -webkit-text-fill-color: #ffffff;
+    color: #FFFFFF;
+    background-color: transparent;
     background-color: #06D340;
 }
 
