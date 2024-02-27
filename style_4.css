@@ -116,6 +116,7 @@ body,#next-button, .answer-number::placeholder, .answer-number-2::placeholder, .
     width: 80%;
     grid-template-columns: 25% 25% 25% 25%;
     box-sizing: border-box;
+    color: #ffffff;
 }
 
 .topic-circle {
@@ -165,7 +166,7 @@ body,#next-button, .answer-number::placeholder, .answer-number-2::placeholder, .
 
 #prev {
     border: solid #2F6690;
-    color: white;
+    color: inherit;
     align-items: start;
     background-color: #2F6690;
 }
