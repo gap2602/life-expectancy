@@ -144,7 +144,7 @@ body,#next-button, .answer-number::placeholder, .answer-number-2::placeholder {
     max-width: 40px;
     aspect-ratio: 1;
     margin-bottom: 0px;
-    background-color: white;
+    background-color: #FFFFFF;
     align-items: center;
     justify-content: center;
     font-size: 1.5em;
@@ -163,7 +163,7 @@ body,#next-button, .answer-number::placeholder, .answer-number-2::placeholder {
 
 #prev {
     border: solid #2F6690;
-    color: white;
+    color: #FFFFFF;
     align-items: start;
     background-color: #2F6690;
 }
