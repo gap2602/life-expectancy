@@ -167,6 +167,7 @@ body,#next-button, .answer-number::placeholder, .answer-number-2::placeholder, .
 #prev {
     border: solid #2F6690;
     color: inherit;
+    -webkit-text-fill-color: #ffffff;
     align-items: start;
     background-color: #2F6690;
 }
