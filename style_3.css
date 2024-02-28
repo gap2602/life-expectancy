@@ -166,7 +166,7 @@ body,#next-button, .answer-number::placeholder, .answer-number-2::placeholder {
 
 #prev {
     border: solid #2F6690;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     align-items: start;
     background-color: #2F6690;
     z-index: 2;
