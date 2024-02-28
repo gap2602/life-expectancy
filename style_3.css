@@ -129,7 +129,7 @@ body,#next-button, .answer-number::placeholder, .answer-number-2::placeholder {
 
 .topic-circle + .topic-circle:after{
     content: "";
-    background: #6D6D6D;
+    border: solid #6D6D6D;
     width: 100%;
     height: 4px;
     transform: translateX(-50%) translateY(-500%);
