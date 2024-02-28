@@ -164,12 +164,11 @@ body,#next-button, .answer-number::placeholder, .answer-number-2::placeholder {
     color: #2F6690;
 }
 
-.topic-circle > #prev {
+#prev {
     border: solid #2F6690;
     color: #FFFFFF;
     align-items: start;
     background-color: #2F6690;
-    text-decoration: none;
 }
 
 .topic {
