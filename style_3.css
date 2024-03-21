@@ -336,7 +336,7 @@ body,#next-button, .answer-number::placeholder, .answer-number-2::placeholder {
     display: flex;
     background:#DEF5FF;
     width: 100%;
-    height: 100px;
+    height: 130px;
     margin-top: 20px;
 }
 
