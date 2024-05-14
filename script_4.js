@@ -84,11 +84,11 @@ window.onload = function() {
 };
 
 function checkInput() {
-    const act_1 = document.getElementById("act-1");
-    const act_2 = document.getElementById("act-2");
-    const act_3 = document.getElementById("act-3");
-    const act_4 = document.getElementById("act-4");
-    const act_5 = document.getElementById("act-5");
+    const act_1 = document.getElementById("act-1-week");
+    const act_2 = document.getElementById("act-2-week");
+    const act_3 = document.getElementById("act-3-week");
+    const act_4 = document.getElementById("act-4-week");
+    const act_5 = document.getElementById("act-5-week");
     const smk_status = document.querySelector('input[name="smoke-status"]:checked');
     const alc_status = document.querySelector('input[name="alc-status"]:checked');
     const smoke_roll_curr = document.getElementById("smk-roll-current").value;
