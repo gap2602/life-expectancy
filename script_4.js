@@ -76,6 +76,18 @@ function dayWeekConverter5(source, valueNum) {
     }  
 }
 
+function isPositiveNumber(event) {
+    const charCode = event.which || event.keyCode;
+    if (charCode < 48 || charCode > 57 || (charCode === 48 && value.length > 0)) {
+        if (charCode != 46) {
+            return false
+        } else { 
+      return true;
+        }
+    }
+    return true;
+  }
+
 window.onload = function() {
     if (document.querySelector('input[name="smoke-status"]:checked')) {
         showSmkStatus();
