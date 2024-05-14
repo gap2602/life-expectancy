@@ -736,8 +736,13 @@ body,#next-button, .answer-number::placeholder, .answer-number-2::placeholder, .
     }
 
     .type-block {
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 30% 70%;
         width: 70%;
+    }
+
+    .type-pic-frame {
+        width: 100%;
     }
 
     .type-name {
@@ -750,14 +755,44 @@ body,#next-button, .answer-number::placeholder, .answer-number-2::placeholder, .
         margin-left: 45px;
     }
 
+    .input-block-outer {
+        display: flex;
+        flex-direction: row;
+        margin-left: 30px;
+    }
+
     .input-block {
-        margin-left: 20px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .conj {
+        margin-left: 0;
+        margin-top: 14px;
+        padding-left: 0;
+        height: 100%;
+        width: 30px;
+    }
+
+    .unit{
+        width: 100px;
+        text-align: left;
     }
 
     .answer-number {
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 150px;
+        margin-right: 0;
+    }
+
+    #act-1-w,#act-1-w-2,#act-2-w,#act-2-w-2,#act-3-w,#act-3-w-2,#act-4-w,#act-4-w-2,#act-5-w,#act-5-w-2 {
+        margin-top: 12px;
+    }
+
+    #act-1-week,#act-2-week,#act-3-week,#act-4-week,#act-5-week {
+        width: 160px;
     }
 
     .answer{
