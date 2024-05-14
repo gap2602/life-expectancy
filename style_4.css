@@ -300,6 +300,14 @@ body,#next-button, .answer-number::placeholder, .answer-number-2::placeholder, .
     gap: 0.5em;
 }
 
+.conj {
+    font-size: 1em;
+    font-weight: 600;
+    color: #6D6D6D;
+    margin-top: 5px;
+    margin-left: 1em;
+}
+
 .answer-number {
     font-size: 0.8em;
     font-weight: 400;
@@ -622,6 +630,11 @@ body,#next-button, .answer-number::placeholder, .answer-number-2::placeholder, .
 
     .input-block{
         justify-content: left;
+    }
+
+    .conj{
+        text-align: left;
+        padding-left: 180px;
     }
     
     .answer-number {

@@ -25,6 +25,57 @@ function checkCheckboxState (source) {
     document.getElementById(source+"-amt").disabled = !(document.getElementById(source).checked);
 }
 
+function dayWeekConverter1(source, valueNum) {
+    valueNum = parseFloat(valueNum);
+    inputDay = document.getElementById("act-1");
+    inputWeek = document.getElementById("act-1-week");  
+    if (source == "act-1"){
+        inputWeek.value = (valueNum*7).toFixed(2);
+    } else {
+        inputDay.value = (valueNum/7).toFixed(2);
+    }  
+}
+function dayWeekConverter2(source, valueNum) {
+    valueNum = parseFloat(valueNum);
+    inputDay = document.getElementById("act-2");
+    inputWeek = document.getElementById("act-2-week");  
+    if (source == "act-2"){
+        inputWeek.value = (valueNum*7).toFixed(2);
+    } else {
+        inputDay.value = (valueNum/7).toFixed(2);
+    }  
+}
+function dayWeekConverter3(source, valueNum) {
+    valueNum = parseFloat(valueNum);
+    inputDay = document.getElementById("act-3");
+    inputWeek = document.getElementById("act-3-week");  
+    if (source == "act-3"){
+        inputWeek.value = (valueNum*7).toFixed(2);
+    } else {
+        inputDay.value = (valueNum/7).toFixed(2);
+    }  
+}
+function dayWeekConverter4(source, valueNum) {
+    valueNum = parseFloat(valueNum);
+    inputDay = document.getElementById("act-4");
+    inputWeek = document.getElementById("act-4-week");  
+    if (source == "act-4"){
+        inputWeek.value = (valueNum*7).toFixed(2);
+    } else {
+        inputDay.value = (valueNum/7).toFixed(2);
+    }  
+}
+function dayWeekConverter5(source, valueNum) {
+    valueNum = parseFloat(valueNum);
+    inputDay = document.getElementById("act-5");
+    inputWeek = document.getElementById("act-5-week");  
+    if (source == "act-5"){
+        inputWeek.value = (valueNum*7).toFixed(2);
+    } else {
+        inputDay.value = (valueNum/7).toFixed(2);
+    }  
+}
+
 window.onload = function() {
     if (document.querySelector('input[name="smoke-status"]:checked')) {
         showSmkStatus();
@@ -73,46 +124,66 @@ function checkInput() {
     if (act_1.value == ""){
         document.getElementById("act-1-w").style.visibility = "visible";
         document.getElementById("act-1").style.borderColor = "red";
+        document.getElementById("act-1-w-2").style.visibility = "visible";
+        document.getElementById("act-1-week").style.borderColor = "red";
         check_count += 1;
     } else {
         document.getElementById("act-1-w").style.visibility = "hidden";
         document.getElementById("act-1").style.borderColor = "#E6E6E6";
+        document.getElementById("act-1-w-2").style.visibility = "hidden";
+        document.getElementById("act-1-week").style.borderColor = "#E6E6E6";
     }
 
     if (act_2.value == ""){
         document.getElementById("act-2-w").style.visibility = "visible";
         document.getElementById("act-2").style.borderColor = "red";
+        document.getElementById("act-2-w-2").style.visibility = "visible";
+        document.getElementById("act-2-week").style.borderColor = "red";
         check_count += 1;
     } else {
         document.getElementById("act-2-w").style.visibility = "hidden";
         document.getElementById("act-2").style.borderColor = "#E6E6E6";
+        document.getElementById("act-2-w-2").style.visibility = "hidden";
+        document.getElementById("act-2-week").style.borderColor = "#E6E6E6";
     }
 
     if (act_3.value == ""){
         document.getElementById("act-3-w").style.visibility = "visible";
         document.getElementById("act-3").style.borderColor = "red";
+        document.getElementById("act-3-w-2").style.visibility = "visible";
+        document.getElementById("act-3-week").style.borderColor = "red";
         check_count += 1;
     } else {
         document.getElementById("act-3-w").style.visibility = "hidden";
         document.getElementById("act-3").style.borderColor = "#E6E6E6";
+        document.getElementById("act-3-w-2").style.visibility = "hidden";
+        document.getElementById("act-3-week").style.borderColor = "#E6E6E6";
     }
 
     if (act_4.value == ""){
         document.getElementById("act-4-w").style.visibility = "visible";
         document.getElementById("act-4").style.borderColor = "red";
+        document.getElementById("act-4-w-2").style.visibility = "visible";
+        document.getElementById("act-4-week").style.borderColor = "red";
         check_count += 1;
     } else {
         document.getElementById("act-4-w").style.visibility = "hidden";
         document.getElementById("act-4").style.borderColor = "#E6E6E6";
+        document.getElementById("act-4-w-2").style.visibility = "hidden";
+        document.getElementById("act-4-week").style.borderColor = "#E6E6E6";
     }
 
     if (act_5.value == ""){
         document.getElementById("act-5-w").style.visibility = "visible";
         document.getElementById("act-5").style.borderColor = "red";
+        document.getElementById("act-5-w-2").style.visibility = "visible";
+        document.getElementById("act-5-week").style.borderColor = "red";
         check_count += 1;
     } else {
         document.getElementById("act-5-w").style.visibility = "hidden";
         document.getElementById("act-5").style.borderColor = "#E6E6E6";
+        document.getElementById("act-5-w-2").style.visibility = "hidden";
+        document.getElementById("act-5-week").style.borderColor = "#E6E6E6";
     }
 
     if (smk_status == null){

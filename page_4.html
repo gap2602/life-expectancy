@@ -21,7 +21,7 @@
     <div class ="header">
         <div class="arrow-frame">
             <div id="arrow-circle">
-                <button class = "arrow" type="button" onclick="document.location='page_3.html'">&#8678;</button>
+                <button class = "arrow" type="button" onclick="window.history.back()">&#8678;</button>
             </div> 
             <p id="previous">ย้อนกลับ</p>
         </div>
@@ -52,7 +52,14 @@
             <div class="input-block">
                 <div></div>
                 <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="act-1-w"></i>
-                <input class="answer-number" type="number" placeholder="จำนวนนาทีต่อสัปดาห์" id="act-1" onfocus="this.placeholder=''" onblur="this.placeholder='จำนวนนาทีต่อสัปดาห์'" oninput="validity.valid||(value='');"> <div class="unit">นาทีต่อสัปดาห์</div>
+                <input class="answer-number" type="number" placeholder="จำนวนนาทีต่อวัน" id="act-1" onfocus="this.placeholder=''" onblur="this.placeholder='จำนวนนาทีต่อวัน'" oninput="validity.valid||(value='');" onchange="dayWeekConverter1(this.id,this.value)"> <div class="unit">นาทีต่อวัน</div>
+                <div></div>
+            </div>
+            <div class="conj">หรือ</div>
+            <div class="input-block">
+                <div></div>
+                <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="act-1-w-2"></i>
+                <input class="answer-number" type="number" placeholder="จำนวนนาทีต่อสัปดาห์" id="act-1-week" onfocus="this.placeholder=''" onblur="this.placeholder='จำนวนนาทีต่อสัปดาห์'" oninput="validity.valid||(value='');" onchange="dayWeekConverter1(this.id,this.value)"> <div class="unit">นาทีต่อสัปดาห์</div>
                 <div></div>
             </div>
         </div>
@@ -67,7 +74,14 @@
             <div class="input-block">
                 <div></div>
                 <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="act-2-w"></i>
-                <input class="answer-number" type="number" placeholder="จำนวนนาทีต่อสัปดาห์" id="act-2" onfocus="this.placeholder=''" onblur="this.placeholder='จำนวนนาทีต่อสัปดาห์'" oninput="validity.valid||(value='');"> <div class="unit">นาทีต่อสัปดาห์</div>
+                <input class="answer-number" type="number" placeholder="จำนวนนาทีต่อวัน" id="act-2" onfocus="this.placeholder=''" onblur="this.placeholder='จำนวนนาทีต่อวัน'" oninput="validity.valid||(value='');" onchange="dayWeekConverter2(this.id,this.value)"> <div class="unit">นาทีต่อวัน</div>
+                <div></div>
+            </div>
+            <div class="conj">หรือ</div>
+            <div class="input-block">
+                <div></div>
+                <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="act-2-w-2"></i>
+                <input class="answer-number" type="number" placeholder="จำนวนนาทีต่อสัปดาห์" id="act-2-week" onfocus="this.placeholder=''" onblur="this.placeholder='จำนวนนาทีต่อสัปดาห์'" oninput="validity.valid||(value='');" onchange="dayWeekConverter2(this.id,this.value)"> <div class="unit">นาทีต่อสัปดาห์</div>
                 <div></div>
             </div>
         </div>
@@ -83,7 +97,14 @@
             <div class="input-block">
                 <div></div>
                 <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="act-3-w"></i>
-                <input class="answer-number" type="number" placeholder="จำนวนนาทีต่อสัปดาห์" id="act-3" onfocus="this.placeholder=''" onblur="this.placeholder='จำนวนนาทีต่อสัปดาห์'" oninput="validity.valid||(value='');"> <div class="unit">นาทีต่อสัปดาห์</div>
+                <input class="answer-number" type="number" placeholder="จำนวนนาทีต่อวัน" id="act-3" onfocus="this.placeholder=''" onblur="this.placeholder='จำนวนนาทีต่อวัน'" oninput="validity.valid||(value='');" onchange="dayWeekConverter3(this.id,this.value)"> <div class="unit">นาทีต่อวัน</div>
+                <div></div>
+            </div>
+            <div class="conj">หรือ</div>
+            <div class="input-block">
+                <div></div>
+                <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="act-3-w-2"></i>
+                <input class="answer-number" type="number" placeholder="จำนวนนาทีต่อสัปดาห์" id="act-3-week" onfocus="this.placeholder=''" onblur="this.placeholder='จำนวนนาทีต่อสัปดาห์'" oninput="validity.valid||(value='');" onchange="dayWeekConverter3(this.id,this.value)"> <div class="unit">นาทีต่อสัปดาห์</div>
                 <div></div>
             </div>
         </div>
@@ -99,7 +120,14 @@
             <div class="input-block">
                 <div></div>
                 <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="act-4-w"></i>
-                <input class="answer-number" type="number" placeholder="จำนวนนาทีต่อสัปดาห์" id="act-4" onfocus="this.placeholder=''" onblur="this.placeholder='จำนวนนาทีต่อสัปดาห์'" oninput="validity.valid||(value='');"> <div class="unit">นาทีต่อสัปดาห์</div>
+                <input class="answer-number" type="number" placeholder="จำนวนนาทีต่อวัน" id="act-4" onfocus="this.placeholder=''" onblur="this.placeholder='จำนวนนาทีต่อวัน'" oninput="validity.valid||(value='');" onchange="dayWeekConverter4(this.id,this.value)"> <div class="unit">นาทีต่อวัน</div>
+                <div></div>
+            </div>
+            <div class="conj">หรือ</div>
+            <div class="input-block">
+                <div></div>
+                <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="act-4-w-2"></i>
+                <input class="answer-number" type="number" placeholder="จำนวนนาทีต่อสัปดาห์" id="act-4-week" onfocus="this.placeholder=''" onblur="this.placeholder='จำนวนนาทีต่อสัปดาห์'" oninput="validity.valid||(value='');" onchange="dayWeekConverter4(this.id,this.value)"> <div class="unit">นาทีต่อสัปดาห์</div>
                 <div></div>
             </div>
         </div>
@@ -114,7 +142,14 @@
             <div class="input-block">
                 <div></div>
                 <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="act-5-w"></i>
-                <input class="answer-number" type="number" placeholder="จำนวนนาทีต่อสัปดาห์" id="act-5" onfocus="this.placeholder=''" onblur="this.placeholder='จำนวนนาทีต่อสัปดาห์'" oninput="validity.valid||(value='');"> <div class="unit">นาทีต่อสัปดาห์</div>
+                <input class="answer-number" type="number" placeholder="จำนวนนาทีต่อวัน" id="act-5" onfocus="this.placeholder=''" onblur="this.placeholder='จำนวนนาทีต่อวัน'" oninput="validity.valid||(value='');" onchange="dayWeekConverter5(this.id,this.value)"> <div class="unit">นาทีต่อวัน</div>
+                <div></div>
+            </div>
+            <div class="conj">หรือ</div>
+            <div class="input-block">
+                <div></div>
+                <i class="fa fa-exclamation-circle" style="color:red;visibility:hidden;" id="act-5-w-2"></i>
+                <input class="answer-number" type="number" placeholder="จำนวนนาทีต่อสัปดาห์" id="act-5-week" onfocus="this.placeholder=''" onblur="this.placeholder='จำนวนนาทีต่อสัปดาห์'" oninput="validity.valid||(value='');" onchange="dayWeekConverter5(this.id,this.value)"> <div class="unit">นาทีต่อสัปดาห์</div>
                 <div></div>
             </div>
         </div>
