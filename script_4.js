@@ -356,6 +356,10 @@ function checkInput() {
                 sum_alc += (cl_amount * 104);
             } else if (cl_unit == "bottle") {
                 sum_alc += (cl_amount * 220);
+            } else if (cl_unit == "peg") {
+                sum_alc += (cl_amount * 10);
+            } else if (cl_unit == "cap") {
+                sum_alc += (cl_amount * 10);
             }
         }
 
@@ -364,6 +368,10 @@ function checkInput() {
                 sum_alc += (white_amount * 104);
             } else if (white_unit == "bottle") {
                 sum_alc += (white_amount * 220);
+            } else if (white_unit == "peg") {
+                sum_alc += (white_amount * 10);
+            } else if (white_unit == "cap") {
+                sum_alc += (white_amount * 10);
             }
         }
         
@@ -372,11 +380,7 @@ function checkInput() {
         }
         
         if (wort_status == true) {
-            if (wort_unit == "tong" || wort_unit == "cup") {
-                sum_alc += (wort_amount * 10);
-            } else if (wort_status == true) {
-                sum_alc += (wort_amount * 2.5);
-            }
+            sum_alc += (wort_amount * 10);
         }
         
         if (cocktail_status == true) {
